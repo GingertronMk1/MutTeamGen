@@ -21,5 +21,6 @@ for link in soup.find_all('a', class_='player-list-item__link'):
   player = get_api_player_from_web_link(href)
   firstName = player.get('firstName')
   lastName = player.get('lastName')
-  print(f"{firstName} {lastName}")
+  # print(f"{firstName} {lastName}")
+  print(json.dumps(player, indent=4))
 
