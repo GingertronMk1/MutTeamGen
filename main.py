@@ -1,20 +1,24 @@
+import json
 import requests
 from bs4 import BeautifulSoup
 
 def get_api_player(id):
-  return requests.get(f"https://www.mut.gg/api/mutdb/player-items/{id}").json().get('data', [])[0]
+  return requests.get(f"https://www.mut.gg/api/mutdb/player-items/{id}").json().get('data')
 
 def get_api_player_from_web_link(link):
-  split_link = link.split('/')
-  id = split_link[-1]
-  return get_api_player(id)
+  split_link = list(s for s in link.split('/') if s)
+  player_id = split_link[-1]
+  print(player_id)
+  return get_api_player(player_id)
 
 vgm_url = 'https://www.mut.gg/players'
 html_text = requests.get(vgm_url).text
 soup = BeautifulSoup(html_text, 'html.parser')
 
 for link in soup.find_all('a', class_='player-list-item__link'):
-  player = get_api_player_from_web_link(link.get('href'))
+  href = link.get('href')
+  print(href)
+  player = get_api_player_from_web_link(href)
   firstName = player.get('firstName')
   lastName = player.get('lastName')
   print(f"{firstName} {lastName}")
