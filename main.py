@@ -81,7 +81,7 @@ acceptable_teams = [
 
 for player in loaded_players:
   position = player.get("position").get("abbreviation")
-  if len(lineup[position]) < position_numbers[position] and player.get("displayChemName") in acceptable_teams:
+  if len(lineup[position]) < position_numbers[position] and player.get("displayChemName") in acceptable_teams and not any(curr.get('firstName') == player.get('firstName') and curr.get('lastName') == player.get('lastName') for curr in lineup[position]):
     lineup[position].append(copy.deepcopy(player))
 
 with open("lineup.json", "w") as lineup_file:
