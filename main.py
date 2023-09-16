@@ -5,7 +5,7 @@ import requests
 from sys import exit
 from bs4 import BeautifulSoup
 
-FROM_INTERNET = False
+FROM_INTERNET = True
 
 position_numbers = {
     "QB": 2,
@@ -51,38 +51,47 @@ base_url = 'https://www.mut.gg/players'
 html_text = requests.get(base_url).text
 soup = BeautifulSoup(html_text, 'html.parser')
 
-if FROM_INTERNET:
+def get_lineup(lineup):
+  acceptable_teams = [
+      "sea","phi"
+      ]
   players = list()
   for page in range(1,500):
     print(f"Checking {page}")
-    retrieved_page = requests.get(f"{base_url}?page={page}")
-    if retrieved_page.status_code != 200:
-      del retrieved_page
-      print("Done!")
-      break
-    retrieved_page = BeautifulSoup(retrieved_page.text, 'html.parser')
-    for lkey, link in enumerate(retrieved_page.find_all('a', class_='player-list-item__link')):
-      print(f"{page} | {lkey}")
-      href = link.get('href')
-      retrieved_player = get_api_player_from_web_link(href)
-      if retrieved_player is not None:
-        players.append(copy.deepcopy(retrieved_player))
+    for chem in acceptable_teams:
+      retrieved_page = requests.get(f"{base_url}?page={page}&team_chem={chem}")
+      if retrieved_page.status_code != 200:
+        del retrieved_page
+        print("Done!")
+        continue
+      retrieved_page = BeautifulSoup(retrieved_page.text, 'html.parser')
+      for lkey, link in enumerate(retrieved_page.find_all('a', class_='player-list-item__link')):
+        print(f"{page} | {lkey}")
+        href = link.get('href')
+        retrieved_player = get_api_player_from_web_link(href)
+        if retrieved_player is not None:
+          position = retrieved_player.get("position").get("abbreviation")
+          firstName = retrieved_player.get('firstName')
+          lastName = retrieved_player.get('lastName')
+          add_condition = all([
+                            len(lineup[position]) < position_numbers[position],
+                            not any(curr.get('firstName') == firstName
+                                    and curr.get('lastName') == lastName
+                                    for curr in lineup[position]
+                                ),
+                            ])
+          if add_condition:
+            lineup[position].append(copy.deepcopy(retrieved_player))
+            print(f"Added {firstName} {lastName}")
+          fulls = list()
+          for (position, number) in position_numbers.items():
+            print(f"{position}: {len(lineup[position])}/{number}")
+            fulls.append(len(lineup[position]) >= number)
+          if all(fulls):
+            return lineup
+    return lineup
 
-  with open("players.json", "w") as out_file:
-    json.dump(players, out_file, indent=4)
-
-with open("players.json", "r") as in_file:
-  loaded_players = json.load(in_file)
-
-acceptable_teams = [
-    "Seattle Seahawks",
-    "Philadelphia Eagles"
-    ]
-
-for player in loaded_players:
-  position = player.get("position").get("abbreviation")
-  if len(lineup[position]) < position_numbers[position] and player.get("displayChemName") in acceptable_teams and not any(curr.get('firstName') == player.get('firstName') and curr.get('lastName') == player.get('lastName') for curr in lineup[position]):
-    lineup[position].append(copy.deepcopy(player))
+lineup = get_lineup(lineup)
 
 with open("lineup.json", "w") as lineup_file:
   json.dump(lineup, lineup_file, indent=4)
