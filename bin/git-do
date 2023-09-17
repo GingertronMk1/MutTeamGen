@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+git add . && git commit -m "Updates" && git pull & git push

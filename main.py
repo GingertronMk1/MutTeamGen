@@ -10,7 +10,7 @@ FROM_INTERNET = True
 position_numbers = {
     "QB": 2,
     "HB": 3,
-    "FB": 2,
+    "FB": 1,
     "WR": 5,
     "TE": 3,
     "LT": 2,
@@ -59,7 +59,9 @@ def get_lineup(lineup):
   for page in range(1,500):
     print(f"Checking {page}")
     for chem in acceptable_teams:
-      retrieved_page = requests.get(f"{base_url}?page={page}&team_chem={chem}")
+      url = f"{base_url}?page={page}&team_chem={chem}"
+      print(url)
+      retrieved_page = requests.get(url)
       if retrieved_page.status_code != 200:
         del retrieved_page
         print("Done!")
@@ -88,8 +90,10 @@ def get_lineup(lineup):
             print(f"{position}: {len(lineup[position])}/{number}")
             fulls.append(len(lineup[position]) >= number)
           if all(fulls):
+            print("All Full Up")
             return lineup
-    return lineup
+  print("Exhausted")
+  return lineup
 
 lineup = get_lineup(lineup)
 

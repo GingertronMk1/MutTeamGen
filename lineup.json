@@ -147,26 +147,26 @@
                 "name": "Improviser - QB",
                 "nameWithoutPosition": "Improviser"
             },
-            "pcPrice": 360000,
-            "pcPriceDisplay": "360K",
-            "pcPercentChange": "-21.3000",
-            "pcPercentChangeDisplay": "-21.3",
-            "xb1Price": 397300,
-            "xb1PriceDisplay": "397K",
-            "xb1PercentChange": "-9.6800",
-            "xb1PercentChangeDisplay": "-9.68",
-            "xbsxPrice": 378900,
-            "xbsxPriceDisplay": "379K",
-            "xbsxPercentChange": "-5.0400",
-            "xbsxPercentChangeDisplay": "-5.04",
-            "ps4Price": 400000,
-            "ps4PriceDisplay": "400K",
-            "ps4PercentChange": "-3.6100",
-            "ps4PercentChangeDisplay": "-3.61",
-            "ps5Price": 396900,
-            "ps5PriceDisplay": "397K",
-            "ps5PercentChange": "-11.2000",
-            "ps5PercentChangeDisplay": "-11.2",
+            "pcPrice": 415300,
+            "pcPriceDisplay": "415K",
+            "pcPercentChange": "-9.1800",
+            "pcPercentChangeDisplay": "-9.18",
+            "xb1Price": 362900,
+            "xb1PriceDisplay": "363K",
+            "xb1PercentChange": "-17.5000",
+            "xb1PercentChangeDisplay": "-17.5",
+            "xbsxPrice": 380900,
+            "xbsxPriceDisplay": "381K",
+            "xbsxPercentChange": "-4.5400",
+            "xbsxPercentChangeDisplay": "-4.54",
+            "ps4Price": 400900,
+            "ps4PriceDisplay": "401K",
+            "ps4PercentChange": "-3.4000",
+            "ps4PercentChangeDisplay": "-3.40",
+            "ps5Price": 398900,
+            "ps5PriceDisplay": "399K",
+            "ps5PercentChange": "-10.8000",
+            "ps5PercentChangeDisplay": "-10.8",
             "displayChemAbbreviation": "atl",
             "displayChemImageUrl": "https://media.mut.gg/24/mutdb/chemistry/6140_kLxbToC.xsl",
             "displayChemName": "Atlanta Falcons",
@@ -321,30 +321,116 @@
                 "name": "Elusive Back - HB",
                 "nameWithoutPosition": "Elusive Back"
             },
-            "pcPrice": 80000,
-            "pcPriceDisplay": "80K",
-            "pcPercentChange": "-0.2100",
-            "pcPercentChangeDisplay": "-0.21",
-            "xb1Price": 85170,
-            "xb1PriceDisplay": "85.2K",
-            "xb1PercentChange": "-2.8500",
-            "xb1PercentChangeDisplay": "-2.85",
-            "xbsxPrice": 70420,
-            "xbsxPriceDisplay": "70.4K",
-            "xbsxPercentChange": "-4.8400",
-            "xbsxPercentChangeDisplay": "-4.84",
-            "ps4Price": 87670,
-            "ps4PriceDisplay": "87.7K",
-            "ps4PercentChange": "-2.2300",
-            "ps4PercentChangeDisplay": "-2.23",
-            "ps5Price": 73500,
-            "ps5PriceDisplay": "73.5K",
-            "ps5PercentChange": "-3.5100",
-            "ps5PercentChangeDisplay": "-3.51",
+            "pcPrice": 75670,
+            "pcPriceDisplay": "75.7K",
+            "pcPercentChange": "-5.6100",
+            "pcPercentChangeDisplay": "-5.61",
+            "xb1Price": 84670,
+            "xb1PriceDisplay": "84.7K",
+            "xb1PercentChange": "-3.4200",
+            "xb1PercentChangeDisplay": "-3.42",
+            "xbsxPrice": 72670,
+            "xbsxPriceDisplay": "72.7K",
+            "xbsxPercentChange": "-1.8000",
+            "xbsxPercentChangeDisplay": "-1.80",
+            "ps4Price": 85910,
+            "ps4PriceDisplay": "85.9K",
+            "ps4PercentChange": "-4.1900",
+            "ps4PercentChangeDisplay": "-4.19",
+            "ps5Price": 77170,
+            "ps5PriceDisplay": "77.2K",
+            "ps5PercentChange": "1.3100",
+            "ps5PercentChangeDisplay": "1.31",
             "displayChemAbbreviation": "car",
             "displayChemImageUrl": "https://media.mut.gg/24/mutdb/chemistry/6210_F8OAhif.xsl",
             "displayChemName": "Carolina Panthers",
             "releaseDate": "2023-09-07T19:07:02.555565Z"
+        },
+        {
+            "pk": 21011,
+            "externalId": 11526639,
+            "gameSlug": "24",
+            "overall": 80,
+            "maxOverall": 87,
+            "image": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=100,height=100,quality=80,fit=cover,gravity=top/24/mutdb/playeritem/11526639.jpg"
+            },
+            "fullImage": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=208,height=356,quality=80,fit=cover,gravity=top/24/mutdb/playeritem/11526639.jpg"
+            },
+            "borderImage": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=300,height=401,quality=80,fit=cover,gravity=top/24/mutdb/border/321.png"
+            },
+            "socialImage": {
+                "url": "https://media.mut.gg/24/mutdb/playeritem/social_11526639.webp"
+            },
+            "cardImage": {
+                "url": "https://media.mut.gg/24/mutdb/playeritem/card_11526639_SVwLd1k.webp"
+            },
+            "firstName": "Frank",
+            "lastName": "Gore",
+            "team": {
+                "id": 16,
+                "name": "49ers",
+                "location": "San Francisco",
+                "abbreviation": "SF",
+                "primaryHexColor": "#AA0000",
+                "secondaryHexColor": "#B3995D",
+                "urlSlug": "san-francisco-49ers"
+            },
+            "program": {
+                "id": 240,
+                "name": "Team Captains",
+                "image": {
+                    "url": "https://media.mut.gg/24/mutdb/program/115.png"
+                },
+                "hexColor": "#C1A465"
+            },
+            "canAuction": false,
+            "canTrade": false,
+            "isMaxedOvr": false,
+            "hasPowerUp": false,
+            "isLtd": false,
+            "tier": 4,
+            "position": {
+                "id": 2,
+                "name": "Half Back",
+                "abbreviation": "HB",
+                "basePosition": {
+                    "id": 2,
+                    "name": "Half Back",
+                    "abbreviation": "HB"
+                }
+            },
+            "url": "/players/26639-frank-gore/24-11526639/",
+            "archetype": {
+                "name": "Power Back - HB",
+                "nameWithoutPosition": "Power Back"
+            },
+            "pcPrice": null,
+            "pcPriceDisplay": "Unknown",
+            "pcPercentChange": null,
+            "pcPercentChangeDisplay": null,
+            "xb1Price": null,
+            "xb1PriceDisplay": "Unknown",
+            "xb1PercentChange": null,
+            "xb1PercentChangeDisplay": null,
+            "xbsxPrice": null,
+            "xbsxPriceDisplay": "Unknown",
+            "xbsxPercentChange": null,
+            "xbsxPercentChangeDisplay": null,
+            "ps4Price": null,
+            "ps4PriceDisplay": "Unknown",
+            "ps4PercentChange": null,
+            "ps4PercentChangeDisplay": null,
+            "ps5Price": null,
+            "ps5PriceDisplay": "Unknown",
+            "ps5PercentChange": null,
+            "ps5PercentChangeDisplay": null,
+            "displayChemAbbreviation": "sf",
+            "displayChemImageUrl": "https://media.mut.gg/24/mutdb/chemistry/6150_gInIpZz.xsl",
+            "displayChemName": "San Francisco 49ers",
+            "releaseDate": "2023-08-15T18:21:26.955780Z"
         }
     ],
     "FB": [
@@ -409,10 +495,10 @@
                 "name": "Utility - FB",
                 "nameWithoutPosition": "Utility"
             },
-            "pcPrice": 222550,
-            "pcPriceDisplay": "223K",
-            "pcPercentChange": "-10.3000",
-            "pcPercentChangeDisplay": "-10.3",
+            "pcPrice": 220000,
+            "pcPriceDisplay": "220K",
+            "pcPercentChange": "-11.3000",
+            "pcPercentChangeDisplay": "-11.3",
             "xb1Price": 253550,
             "xb1PriceDisplay": "254K",
             "xb1PercentChange": "-2.3100",
@@ -497,26 +583,26 @@
                 "name": "Playmaker - WR",
                 "nameWithoutPosition": "Playmaker"
             },
-            "pcPrice": 200550,
-            "pcPriceDisplay": "201K",
-            "pcPercentChange": "-12.6000",
-            "pcPercentChangeDisplay": "-12.6",
-            "xb1Price": 270000,
-            "xb1PriceDisplay": "270K",
-            "xb1PercentChange": "-15.5000",
-            "xb1PercentChangeDisplay": "-15.5",
-            "xbsxPrice": 207000,
-            "xbsxPriceDisplay": "207K",
-            "xbsxPercentChange": "-10.4000",
-            "xbsxPercentChangeDisplay": "-10.4",
+            "pcPrice": 194000,
+            "pcPriceDisplay": "194K",
+            "pcPercentChange": "-15.5000",
+            "pcPercentChangeDisplay": "-15.5",
+            "xb1Price": 270550,
+            "xb1PriceDisplay": "271K",
+            "xb1PercentChange": "-15.3000",
+            "xb1PercentChangeDisplay": "-15.3",
+            "xbsxPrice": 209300,
+            "xbsxPriceDisplay": "209K",
+            "xbsxPercentChange": "-9.3900",
+            "xbsxPercentChangeDisplay": "-9.39",
             "ps4Price": 320550,
             "ps4PriceDisplay": "321K",
             "ps4PercentChange": "-1.2300",
             "ps4PercentChangeDisplay": "-1.23",
-            "ps5Price": 211000,
-            "ps5PriceDisplay": "211K",
-            "ps5PercentChange": "-12.6000",
-            "ps5PercentChangeDisplay": "-12.6",
+            "ps5Price": 215550,
+            "ps5PriceDisplay": "216K",
+            "ps5PercentChange": "-10.8000",
+            "ps5PercentChangeDisplay": "-10.8",
             "displayChemAbbreviation": "sf",
             "displayChemImageUrl": "https://media.mut.gg/24/mutdb/chemistry/6150_gInIpZz.xsl",
             "displayChemName": "San Francisco 49ers",
@@ -583,26 +669,26 @@
                 "name": "Deep Threat - WR",
                 "nameWithoutPosition": "Deep Threat"
             },
-            "pcPrice": 191000,
-            "pcPriceDisplay": "191K",
-            "pcPercentChange": "-1.5500",
-            "pcPercentChangeDisplay": "-1.55",
-            "xb1Price": 230000,
-            "xb1PriceDisplay": "230K",
-            "xb1PercentChange": "-19.2000",
-            "xb1PercentChangeDisplay": "-19.2",
-            "xbsxPrice": 190009,
-            "xbsxPriceDisplay": "190K",
-            "xbsxPercentChange": "-2.3300",
-            "xbsxPercentChangeDisplay": "-2.33",
-            "ps4Price": 285550,
-            "ps4PriceDisplay": "286K",
-            "ps4PercentChange": "-1.7200",
-            "ps4PercentChangeDisplay": "-1.72",
-            "ps5Price": 189550,
-            "ps5PriceDisplay": "190K",
-            "ps5PercentChange": "-1.7900",
-            "ps5PercentChangeDisplay": "-1.79",
+            "pcPrice": 198550,
+            "pcPriceDisplay": "199K",
+            "pcPercentChange": "2.3500",
+            "pcPercentChangeDisplay": "2.35",
+            "xb1Price": 271550,
+            "xb1PriceDisplay": "272K",
+            "xb1PercentChange": "-4.5700",
+            "xb1PercentChangeDisplay": "-4.57",
+            "xbsxPrice": 194000,
+            "xbsxPriceDisplay": "194K",
+            "xbsxPercentChange": "-0.2800",
+            "xbsxPercentChangeDisplay": "-0.28",
+            "ps4Price": 271550,
+            "ps4PriceDisplay": "272K",
+            "ps4PercentChange": "-6.5400",
+            "ps4PercentChangeDisplay": "-6.54",
+            "ps5Price": 196550,
+            "ps5PriceDisplay": "197K",
+            "ps5PercentChange": "1.8400",
+            "ps5PercentChangeDisplay": "1.84",
             "displayChemAbbreviation": "chi",
             "displayChemImageUrl": "https://media.mut.gg/24/mutdb/chemistry/6010_D76AFaR.xsl",
             "displayChemName": "Chicago Bears",
@@ -669,14 +755,14 @@
                 "name": "Physical - WR",
                 "nameWithoutPosition": "Physical"
             },
-            "pcPrice": 416000,
-            "pcPriceDisplay": "416K",
-            "pcPercentChange": "-4.5900",
-            "pcPercentChangeDisplay": "-4.59",
-            "xb1Price": 441000,
-            "xb1PriceDisplay": "441K",
-            "xb1PercentChange": "-4.3400",
-            "xb1PercentChangeDisplay": "-4.34",
+            "pcPrice": 410000,
+            "pcPriceDisplay": "410K",
+            "pcPercentChange": "-5.9600",
+            "pcPercentChangeDisplay": "-5.96",
+            "xb1Price": 435000,
+            "xb1PriceDisplay": "435K",
+            "xb1PercentChange": "-5.6400",
+            "xb1PercentChangeDisplay": "-5.64",
             "xbsxPrice": 415000,
             "xbsxPriceDisplay": "415K",
             "xbsxPercentChange": "-1.4300",
@@ -685,10 +771,10 @@
             "ps4PriceDisplay": "470K",
             "ps4PercentChange": "-2.2900",
             "ps4PercentChangeDisplay": "-2.29",
-            "ps5Price": 412000,
-            "ps5PriceDisplay": "412K",
-            "ps5PercentChange": "-0.7200",
-            "ps5PercentChangeDisplay": "-0.72",
+            "ps5Price": 425000,
+            "ps5PriceDisplay": "425K",
+            "ps5PercentChange": "2.4100",
+            "ps5PercentChangeDisplay": "2.41",
             "displayChemAbbreviation": "atl",
             "displayChemImageUrl": "https://media.mut.gg/24/mutdb/chemistry/6140_kLxbToC.xsl",
             "displayChemName": "Atlanta Falcons",
@@ -929,30 +1015,202 @@
                 "name": "Vertical Threat - TE",
                 "nameWithoutPosition": "Vertical Threat"
             },
-            "pcPrice": 103780,
+            "pcPrice": 103670,
             "pcPriceDisplay": "104K",
-            "pcPercentChange": "2.0800",
-            "pcPercentChangeDisplay": "2.08",
+            "pcPercentChange": "1.9700",
+            "pcPercentChangeDisplay": "1.97",
             "xb1Price": 126000,
             "xb1PriceDisplay": "126K",
             "xb1PercentChange": "-0.9200",
             "xb1PercentChangeDisplay": "-0.92",
-            "xbsxPrice": 119670,
-            "xbsxPriceDisplay": "120K",
-            "xbsxPercentChange": "-10.8000",
-            "xbsxPercentChangeDisplay": "-10.8",
-            "ps4Price": 136000,
-            "ps4PriceDisplay": "136K",
-            "ps4PercentChange": "23.6000",
-            "ps4PercentChangeDisplay": "23.6",
-            "ps5Price": 120670,
-            "ps5PriceDisplay": "121K",
-            "ps5PercentChange": "-6.9400",
-            "ps5PercentChangeDisplay": "-6.94",
+            "xbsxPrice": 127000,
+            "xbsxPriceDisplay": "127K",
+            "xbsxPercentChange": "-5.3400",
+            "xbsxPercentChangeDisplay": "-5.34",
+            "ps4Price": 128670,
+            "ps4PriceDisplay": "129K",
+            "ps4PercentChange": "-5.3900",
+            "ps4PercentChangeDisplay": "-5.39",
+            "ps5Price": 131000,
+            "ps5PriceDisplay": "131K",
+            "ps5PercentChange": "1.0300",
+            "ps5PercentChangeDisplay": "1.03",
             "displayChemAbbreviation": "phi",
             "displayChemImageUrl": "https://media.mut.gg/24/mutdb/chemistry/6130_PKZ76f1.xsl",
             "displayChemName": "Philadelphia Eagles",
             "releaseDate": "2023-09-06T17:35:51.077720Z"
+        },
+        {
+            "pk": 18732,
+            "externalId": 10113128,
+            "gameSlug": "24",
+            "overall": 84,
+            "maxOverall": 84,
+            "image": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=100,height=100,quality=80,fit=cover,gravity=top/24/mutdb/playeritem/10113128_91xLi9A.png"
+            },
+            "fullImage": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=208,height=356,quality=80,fit=cover,gravity=top/24/mutdb/playeritem/10113128_91xLi9A.png"
+            },
+            "borderImage": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=300,height=401,quality=80,fit=cover,gravity=top/24/mutdb/border/315_PqjCnPS.png"
+            },
+            "socialImage": {
+                "url": "https://media.mut.gg/24/mutdb/playeritem/social_10113128.webp"
+            },
+            "cardImage": {
+                "url": "https://media.mut.gg/24/mutdb/playeritem/card_10113128.webp"
+            },
+            "firstName": "Dallas",
+            "lastName": "Goedert",
+            "team": {
+                "id": 14,
+                "name": "Eagles",
+                "location": "Philadelphia",
+                "abbreviation": "PHI",
+                "primaryHexColor": "#004C54",
+                "secondaryHexColor": "#A5ACAF",
+                "urlSlug": "philadelphia-eagles"
+            },
+            "program": {
+                "id": 233,
+                "name": "Core Set",
+                "image": {
+                    "url": "https://media.mut.gg/24/mutdb/program/101_Ix7AJmE.png"
+                },
+                "hexColor": "#000000"
+            },
+            "canAuction": true,
+            "canTrade": true,
+            "isMaxedOvr": false,
+            "hasPowerUp": false,
+            "isLtd": false,
+            "tier": 4,
+            "position": {
+                "id": 5,
+                "name": "Tight End",
+                "abbreviation": "TE",
+                "basePosition": {
+                    "id": 5,
+                    "name": "Tight End",
+                    "abbreviation": "TE"
+                }
+            },
+            "url": "/players/13128-dallas-goedert/24-10113128/",
+            "archetype": {
+                "name": "Vertical Threat - TE",
+                "nameWithoutPosition": "Vertical Threat"
+            },
+            "pcPrice": 60960,
+            "pcPriceDisplay": "61K",
+            "pcPercentChange": "0.7600",
+            "pcPercentChangeDisplay": "0.76",
+            "xb1Price": 65500,
+            "xb1PriceDisplay": "65.5K",
+            "xb1PercentChange": "-5.3600",
+            "xb1PercentChangeDisplay": "-5.36",
+            "xbsxPrice": 54710,
+            "xbsxPriceDisplay": "54.7K",
+            "xbsxPercentChange": "-1.4200",
+            "xbsxPercentChangeDisplay": "-1.42",
+            "ps4Price": 63960,
+            "ps4PriceDisplay": "64K",
+            "ps4PercentChange": "-7.5900",
+            "ps4PercentChangeDisplay": "-7.59",
+            "ps5Price": 55710,
+            "ps5PriceDisplay": "55.7K",
+            "ps5PercentChange": "-0.8900",
+            "ps5PercentChangeDisplay": "-0.89",
+            "displayChemAbbreviation": "phi",
+            "displayChemImageUrl": "https://media.mut.gg/24/mutdb/chemistry/6130_PKZ76f1.xsl",
+            "displayChemName": "Philadelphia Eagles",
+            "releaseDate": "2023-08-14T23:58:11.588501Z"
+        },
+        {
+            "pk": 20675,
+            "externalId": 10113392,
+            "gameSlug": "24",
+            "overall": 77,
+            "maxOverall": 77,
+            "image": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=100,height=100,quality=80,fit=cover,gravity=top/24/mutdb/playeritem/10113392_LChH9nE.png"
+            },
+            "fullImage": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=208,height=356,quality=80,fit=cover,gravity=top/24/mutdb/playeritem/10113392_LChH9nE.png"
+            },
+            "borderImage": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=300,height=401,quality=80,fit=cover,gravity=top/24/mutdb/border/318_WVxGAbo.png"
+            },
+            "socialImage": {
+                "url": "https://media.mut.gg/24/mutdb/playeritem/social_10113392.webp"
+            },
+            "cardImage": {
+                "url": "https://media.mut.gg/24/mutdb/playeritem/card_10113392.webp"
+            },
+            "firstName": "Will",
+            "lastName": "Dissly",
+            "team": {
+                "id": 29,
+                "name": "Seahawks",
+                "location": "Seattle",
+                "abbreviation": "SEA",
+                "primaryHexColor": "#002244",
+                "secondaryHexColor": "#69BE28",
+                "urlSlug": "seattle-seahawks"
+            },
+            "program": {
+                "id": 233,
+                "name": "Core Set",
+                "image": {
+                    "url": "https://media.mut.gg/24/mutdb/program/101_Ix7AJmE.png"
+                },
+                "hexColor": "#000000"
+            },
+            "canAuction": true,
+            "canTrade": true,
+            "isMaxedOvr": false,
+            "hasPowerUp": false,
+            "isLtd": false,
+            "tier": 3,
+            "position": {
+                "id": 5,
+                "name": "Tight End",
+                "abbreviation": "TE",
+                "basePosition": {
+                    "id": 5,
+                    "name": "Tight End",
+                    "abbreviation": "TE"
+                }
+            },
+            "url": "/players/13392-will-dissly/24-10113392/",
+            "archetype": {
+                "name": "Possession - TE",
+                "nameWithoutPosition": "Possession"
+            },
+            "pcPrice": 2600,
+            "pcPriceDisplay": "2,600",
+            "pcPercentChange": "-16.1000",
+            "pcPercentChangeDisplay": "-16.1",
+            "xb1Price": 2600,
+            "xb1PriceDisplay": "2,600",
+            "xb1PercentChange": "-10.3000",
+            "xb1PercentChangeDisplay": "-10.3",
+            "xbsxPrice": 1300,
+            "xbsxPriceDisplay": "1,300",
+            "xbsxPercentChange": "-36.6000",
+            "xbsxPercentChangeDisplay": "-36.6",
+            "ps4Price": 2900,
+            "ps4PriceDisplay": "2,900",
+            "ps4PercentChange": "-3.3300",
+            "ps4PercentChangeDisplay": "-3.33",
+            "ps5Price": 1900,
+            "ps5PriceDisplay": "1,900",
+            "ps5PercentChange": "-29.6000",
+            "ps5PercentChangeDisplay": "-29.6",
+            "displayChemAbbreviation": "sea",
+            "displayChemImageUrl": "https://media.mut.gg/24/mutdb/chemistry/6280_bNBGh30.xsl",
+            "displayChemName": "Seattle Seahawks",
+            "releaseDate": "2023-08-14T23:58:11.957248Z"
         }
     ],
     "LT": [
@@ -1129,7 +1387,180 @@
             "releaseDate": "2023-09-07T19:07:02.556233Z"
         }
     ],
-    "LG": [],
+    "LG": [
+        {
+            "pk": 18600,
+            "externalId": 10121101,
+            "gameSlug": "24",
+            "overall": 84,
+            "maxOverall": 84,
+            "image": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=100,height=100,quality=80,fit=cover,gravity=top/24/mutdb/playeritem/10121101_7lxqUe3.png"
+            },
+            "fullImage": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=208,height=356,quality=80,fit=cover,gravity=top/24/mutdb/playeritem/10121101_7lxqUe3.png"
+            },
+            "borderImage": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=300,height=401,quality=80,fit=cover,gravity=top/24/mutdb/border/315_PqjCnPS.png"
+            },
+            "socialImage": {
+                "url": "https://media.mut.gg/24/mutdb/playeritem/social_10121101.webp"
+            },
+            "cardImage": {
+                "url": "https://media.mut.gg/24/mutdb/playeritem/card_10121101.webp"
+            },
+            "firstName": "Damien",
+            "lastName": "Lewis",
+            "team": {
+                "id": 29,
+                "name": "Seahawks",
+                "location": "Seattle",
+                "abbreviation": "SEA",
+                "primaryHexColor": "#002244",
+                "secondaryHexColor": "#69BE28",
+                "urlSlug": "seattle-seahawks"
+            },
+            "program": {
+                "id": 233,
+                "name": "Core Set",
+                "image": {
+                    "url": "https://media.mut.gg/24/mutdb/program/101_Ix7AJmE.png"
+                },
+                "hexColor": "#000000"
+            },
+            "canAuction": true,
+            "canTrade": true,
+            "isMaxedOvr": false,
+            "hasPowerUp": false,
+            "isLtd": false,
+            "tier": 4,
+            "position": {
+                "id": 7,
+                "name": "Left Guard",
+                "abbreviation": "LG",
+                "basePosition": {
+                    "id": 7,
+                    "name": "Offensive Guard",
+                    "abbreviation": "OG"
+                }
+            },
+            "url": "/players/21101-damien-lewis/24-10121101/",
+            "archetype": {
+                "name": "Power - G",
+                "nameWithoutPosition": "Power"
+            },
+            "pcPrice": 90960,
+            "pcPriceDisplay": "91K",
+            "pcPercentChange": "-4.4600",
+            "pcPercentChangeDisplay": "-4.46",
+            "xb1Price": 75999,
+            "xb1PriceDisplay": "76K",
+            "xb1PercentChange": "-15.8000",
+            "xb1PercentChangeDisplay": "-15.8",
+            "xbsxPrice": 71960,
+            "xbsxPriceDisplay": "72K",
+            "xbsxPercentChange": "1.4100",
+            "xbsxPercentChangeDisplay": "1.41",
+            "ps4Price": 88460,
+            "ps4PriceDisplay": "88.5K",
+            "ps4PercentChange": "-7.6200",
+            "ps4PercentChangeDisplay": "-7.62",
+            "ps5Price": 81500,
+            "ps5PriceDisplay": "81.5K",
+            "ps5PercentChange": "15.3000",
+            "ps5PercentChangeDisplay": "15.3",
+            "displayChemAbbreviation": "sea",
+            "displayChemImageUrl": "https://media.mut.gg/24/mutdb/chemistry/6280_bNBGh30.xsl",
+            "displayChemName": "Seattle Seahawks",
+            "releaseDate": "2023-08-14T23:58:11.563776Z"
+        },
+        {
+            "pk": 18675,
+            "externalId": 10117776,
+            "gameSlug": "24",
+            "overall": 83,
+            "maxOverall": 83,
+            "image": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=100,height=100,quality=80,fit=cover,gravity=top/24/mutdb/playeritem/10117776_pvUGm8B.png"
+            },
+            "fullImage": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=208,height=356,quality=80,fit=cover,gravity=top/24/mutdb/playeritem/10117776_pvUGm8B.png"
+            },
+            "borderImage": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=300,height=401,quality=80,fit=cover,gravity=top/24/mutdb/border/315_PqjCnPS.png"
+            },
+            "socialImage": {
+                "url": "https://media.mut.gg/24/mutdb/playeritem/social_10117776.webp"
+            },
+            "cardImage": {
+                "url": "https://media.mut.gg/24/mutdb/playeritem/card_10117776.webp"
+            },
+            "firstName": "Isaac",
+            "lastName": "Seumalo",
+            "team": {
+                "id": 30,
+                "name": "Steelers",
+                "location": "Pittsburgh",
+                "abbreviation": "PIT",
+                "primaryHexColor": "#FFB612",
+                "secondaryHexColor": "#101820",
+                "urlSlug": "pittsburgh-steelers"
+            },
+            "program": {
+                "id": 233,
+                "name": "Core Set",
+                "image": {
+                    "url": "https://media.mut.gg/24/mutdb/program/101_Ix7AJmE.png"
+                },
+                "hexColor": "#000000"
+            },
+            "canAuction": true,
+            "canTrade": true,
+            "isMaxedOvr": false,
+            "hasPowerUp": false,
+            "isLtd": false,
+            "tier": 4,
+            "position": {
+                "id": 7,
+                "name": "Left Guard",
+                "abbreviation": "LG",
+                "basePosition": {
+                    "id": 7,
+                    "name": "Offensive Guard",
+                    "abbreviation": "OG"
+                }
+            },
+            "url": "/players/17776-isaac-seumalo/24-10117776/",
+            "archetype": {
+                "name": "Power - G",
+                "nameWithoutPosition": "Power"
+            },
+            "pcPrice": 44470,
+            "pcPriceDisplay": "44.5K",
+            "pcPercentChange": "10.6000",
+            "pcPercentChangeDisplay": "10.6",
+            "xb1Price": 40470,
+            "xb1PriceDisplay": "40.5K",
+            "xb1PercentChange": "-13.0000",
+            "xb1PercentChangeDisplay": "-13.0",
+            "xbsxPrice": 35250,
+            "xbsxPriceDisplay": "35.2K",
+            "xbsxPercentChange": "-7.8400",
+            "xbsxPercentChangeDisplay": "-7.84",
+            "ps4Price": 38500,
+            "ps4PriceDisplay": "38.5K",
+            "ps4PercentChange": "-8.0000",
+            "ps4PercentChangeDisplay": "-8.00",
+            "ps5Price": 35470,
+            "ps5PriceDisplay": "35.5K",
+            "ps5PercentChange": "-11.3000",
+            "ps5PercentChangeDisplay": "-11.3",
+            "displayChemAbbreviation": "pit",
+            "displayChemImageUrl": "https://media.mut.gg/24/mutdb/chemistry/6290_U4j2T7X.xsl",
+            "displayChemName": "Pittsburgh Steelers",
+            "releaseDate": "2023-08-14T23:58:11.577883Z"
+        }
+    ],
     "C": [
         {
             "pk": 18838,
@@ -1192,30 +1623,116 @@
                 "name": "Agile - C",
                 "nameWithoutPosition": "Agile"
             },
-            "pcPrice": 154950,
-            "pcPriceDisplay": "155K",
-            "pcPercentChange": "-4.9400",
-            "pcPercentChangeDisplay": "-4.94",
-            "xb1Price": 153450,
-            "xb1PriceDisplay": "153K",
-            "xb1PercentChange": "-1.0000",
-            "xb1PercentChangeDisplay": "-1.00",
-            "xbsxPrice": 125450,
-            "xbsxPriceDisplay": "125K",
-            "xbsxPercentChange": "-3.0900",
-            "xbsxPercentChangeDisplay": "-3.09",
-            "ps4Price": 152000,
-            "ps4PriceDisplay": "152K",
-            "ps4PercentChange": "-6.4300",
-            "ps4PercentChangeDisplay": "-6.43",
-            "ps5Price": 129450,
-            "ps5PriceDisplay": "129K",
-            "ps5PercentChange": "-1.1800",
-            "ps5PercentChangeDisplay": "-1.18",
+            "pcPrice": 154450,
+            "pcPriceDisplay": "154K",
+            "pcPercentChange": "-5.2500",
+            "pcPercentChangeDisplay": "-5.25",
+            "xb1Price": 156950,
+            "xb1PriceDisplay": "157K",
+            "xb1PercentChange": "1.2600",
+            "xb1PercentChangeDisplay": "1.26",
+            "xbsxPrice": 120050,
+            "xbsxPriceDisplay": "120K",
+            "xbsxPercentChange": "-7.2600",
+            "xbsxPercentChangeDisplay": "-7.26",
+            "ps4Price": 153600,
+            "ps4PriceDisplay": "154K",
+            "ps4PercentChange": "-5.4500",
+            "ps4PercentChangeDisplay": "-5.45",
+            "ps5Price": 145000,
+            "ps5PriceDisplay": "145K",
+            "ps5PercentChange": "10.7000",
+            "ps5PercentChangeDisplay": "10.7",
             "displayChemAbbreviation": "phi",
             "displayChemImageUrl": "https://media.mut.gg/24/mutdb/chemistry/6130_PKZ76f1.xsl",
             "displayChemName": "Philadelphia Eagles",
             "releaseDate": "2023-08-14T23:58:11.608607Z"
+        },
+        {
+            "pk": 18768,
+            "externalId": 10112644,
+            "gameSlug": "24",
+            "overall": 85,
+            "maxOverall": 85,
+            "image": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=100,height=100,quality=80,fit=cover,gravity=top/24/mutdb/playeritem/10112644_oDV3gD8.png"
+            },
+            "fullImage": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=208,height=356,quality=80,fit=cover,gravity=top/24/mutdb/playeritem/10112644_oDV3gD8.png"
+            },
+            "borderImage": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=300,height=401,quality=80,fit=cover,gravity=top/24/mutdb/border/315_PqjCnPS.png"
+            },
+            "socialImage": {
+                "url": "https://media.mut.gg/24/mutdb/playeritem/social_10112644.webp"
+            },
+            "cardImage": {
+                "url": "https://media.mut.gg/24/mutdb/playeritem/card_10112644.webp"
+            },
+            "firstName": "Ethan",
+            "lastName": "Pocic",
+            "team": {
+                "id": 6,
+                "name": "Browns",
+                "location": "Cleveland",
+                "abbreviation": "CLE",
+                "primaryHexColor": "#311D00",
+                "secondaryHexColor": "#FF3C00",
+                "urlSlug": "cleveland-browns"
+            },
+            "program": {
+                "id": 233,
+                "name": "Core Set",
+                "image": {
+                    "url": "https://media.mut.gg/24/mutdb/program/101_Ix7AJmE.png"
+                },
+                "hexColor": "#000000"
+            },
+            "canAuction": true,
+            "canTrade": true,
+            "isMaxedOvr": false,
+            "hasPowerUp": false,
+            "isLtd": false,
+            "tier": 4,
+            "position": {
+                "id": 8,
+                "name": "Center",
+                "abbreviation": "C",
+                "basePosition": {
+                    "id": 8,
+                    "name": "Center",
+                    "abbreviation": "C"
+                }
+            },
+            "url": "/players/12644-ethan-pocic/24-10112644/",
+            "archetype": {
+                "name": "Agile - C",
+                "nameWithoutPosition": "Agile"
+            },
+            "pcPrice": 83550,
+            "pcPriceDisplay": "83.5K",
+            "pcPercentChange": "-3.9700",
+            "pcPercentChangeDisplay": "-3.97",
+            "xb1Price": 93000,
+            "xb1PriceDisplay": "93K",
+            "xb1PercentChange": "-5.2700",
+            "xb1PercentChangeDisplay": "-5.27",
+            "xbsxPrice": 79000,
+            "xbsxPriceDisplay": "79K",
+            "xbsxPercentChange": "3.0400",
+            "xbsxPercentChangeDisplay": "3.04",
+            "ps4Price": 90670,
+            "ps4PriceDisplay": "90.7K",
+            "ps4PercentChange": "-1.6300",
+            "ps4PercentChangeDisplay": "-1.63",
+            "ps5Price": 79170,
+            "ps5PriceDisplay": "79.2K",
+            "ps5PercentChange": "4.6300",
+            "ps5PercentChangeDisplay": "4.63",
+            "displayChemAbbreviation": "cle",
+            "displayChemImageUrl": "https://media.mut.gg/24/mutdb/chemistry/6050_903YOLR.xsl",
+            "displayChemName": "Cleveland Browns",
+            "releaseDate": "2023-08-14T23:58:11.595284Z"
         }
     ],
     "RG": [
@@ -1304,6 +1821,90 @@
             "displayChemImageUrl": "https://media.mut.gg/24/mutdb/chemistry/6290_U4j2T7X.xsl",
             "displayChemName": "Pittsburgh Steelers",
             "releaseDate": "2023-09-07T19:07:02.555260Z"
+        },
+        {
+            "pk": 21028,
+            "externalId": 12022893,
+            "gameSlug": "24",
+            "overall": 84,
+            "maxOverall": 84,
+            "image": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=100,height=100,quality=80,fit=cover,gravity=top/24/mutdb/playeritem/12022893.png"
+            },
+            "fullImage": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=208,height=356,quality=80,fit=cover,gravity=top/24/mutdb/playeritem/12022893.png"
+            },
+            "borderImage": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=300,height=401,quality=80,fit=cover,gravity=top/24/mutdb/border/322.png"
+            },
+            "socialImage": {
+                "url": "https://media.mut.gg/24/mutdb/playeritem/social_12022893.webp"
+            },
+            "cardImage": {
+                "url": "https://media.mut.gg/24/mutdb/playeritem/card_12022893_uWNQZQu.webp"
+            },
+            "firstName": "Anthony",
+            "lastName": "Bradford",
+            "team": {
+                "id": 29,
+                "name": "Seahawks",
+                "location": "Seattle",
+                "abbreviation": "SEA",
+                "primaryHexColor": "#002244",
+                "secondaryHexColor": "#69BE28",
+                "urlSlug": "seattle-seahawks"
+            },
+            "program": {
+                "id": 241,
+                "name": "Rookie Premiere",
+                "image": null,
+                "hexColor": "#E22726"
+            },
+            "canAuction": false,
+            "canTrade": false,
+            "isMaxedOvr": false,
+            "hasPowerUp": false,
+            "isLtd": false,
+            "tier": 4,
+            "position": {
+                "id": 9,
+                "name": "Right Guard",
+                "abbreviation": "RG",
+                "basePosition": {
+                    "id": 7,
+                    "name": "Offensive Guard",
+                    "abbreviation": "OG"
+                }
+            },
+            "url": "/players/22893-anthony-bradford/24-12022893/",
+            "archetype": {
+                "name": "Power - G",
+                "nameWithoutPosition": "Power"
+            },
+            "pcPrice": null,
+            "pcPriceDisplay": "Unknown",
+            "pcPercentChange": null,
+            "pcPercentChangeDisplay": null,
+            "xb1Price": null,
+            "xb1PriceDisplay": "Unknown",
+            "xb1PercentChange": null,
+            "xb1PercentChangeDisplay": null,
+            "xbsxPrice": null,
+            "xbsxPriceDisplay": "Unknown",
+            "xbsxPercentChange": null,
+            "xbsxPercentChangeDisplay": null,
+            "ps4Price": null,
+            "ps4PriceDisplay": "Unknown",
+            "ps4PercentChange": null,
+            "ps4PercentChangeDisplay": null,
+            "ps5Price": null,
+            "ps5PriceDisplay": "Unknown",
+            "ps5PercentChange": null,
+            "ps5PercentChangeDisplay": null,
+            "displayChemAbbreviation": "sea",
+            "displayChemImageUrl": "https://media.mut.gg/24/mutdb/chemistry/6280_bNBGh30.xsl",
+            "displayChemName": "Seattle Seahawks",
+            "releaseDate": "2023-08-17T14:38:45.164224Z"
         }
     ],
     "RT": [
@@ -1376,22 +1977,108 @@
             "xb1PriceDisplay": "168K",
             "xb1PercentChange": "-6.7800",
             "xb1PercentChangeDisplay": "-6.78",
-            "xbsxPrice": 165450,
-            "xbsxPriceDisplay": "165K",
-            "xbsxPercentChange": "-1.4900",
-            "xbsxPercentChangeDisplay": "-1.49",
+            "xbsxPrice": 151450,
+            "xbsxPriceDisplay": "151K",
+            "xbsxPercentChange": "-9.8200",
+            "xbsxPercentChangeDisplay": "-9.82",
             "ps4Price": 174000,
             "ps4PriceDisplay": "174K",
             "ps4PercentChange": "3.2300",
             "ps4PercentChangeDisplay": "3.23",
-            "ps5Price": 170000,
-            "ps5PriceDisplay": "170K",
-            "ps5PercentChange": "-3.4100",
-            "ps5PercentChangeDisplay": "-3.41",
+            "ps5Price": 180450,
+            "ps5PriceDisplay": "180K",
+            "ps5PercentChange": "2.5300",
+            "ps5PercentChangeDisplay": "2.53",
             "displayChemAbbreviation": "phi",
             "displayChemImageUrl": "https://media.mut.gg/24/mutdb/chemistry/6130_PKZ76f1.xsl",
             "displayChemName": "Philadelphia Eagles",
             "releaseDate": "2023-08-14T23:58:11.615701Z"
+        },
+        {
+            "pk": 19733,
+            "externalId": 10122105,
+            "gameSlug": "24",
+            "overall": 79,
+            "maxOverall": 79,
+            "image": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=100,height=100,quality=80,fit=cover,gravity=top/24/mutdb/playeritem/10122105_GXogAQj.png"
+            },
+            "fullImage": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=208,height=356,quality=80,fit=cover,gravity=top/24/mutdb/playeritem/10122105_GXogAQj.png"
+            },
+            "borderImage": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=300,height=401,quality=80,fit=cover,gravity=top/24/mutdb/border/318_WVxGAbo.png"
+            },
+            "socialImage": {
+                "url": "https://media.mut.gg/24/mutdb/playeritem/social_10122105.webp"
+            },
+            "cardImage": {
+                "url": "https://media.mut.gg/24/mutdb/playeritem/card_10122105.webp"
+            },
+            "firstName": "Abraham",
+            "lastName": "Lucas",
+            "team": {
+                "id": 29,
+                "name": "Seahawks",
+                "location": "Seattle",
+                "abbreviation": "SEA",
+                "primaryHexColor": "#002244",
+                "secondaryHexColor": "#69BE28",
+                "urlSlug": "seattle-seahawks"
+            },
+            "program": {
+                "id": 233,
+                "name": "Core Set",
+                "image": {
+                    "url": "https://media.mut.gg/24/mutdb/program/101_Ix7AJmE.png"
+                },
+                "hexColor": "#000000"
+            },
+            "canAuction": true,
+            "canTrade": true,
+            "isMaxedOvr": false,
+            "hasPowerUp": false,
+            "isLtd": false,
+            "tier": 3,
+            "position": {
+                "id": 10,
+                "name": "Right Tackle",
+                "abbreviation": "RT",
+                "basePosition": {
+                    "id": 6,
+                    "name": "Offensive Tackle",
+                    "abbreviation": "OT"
+                }
+            },
+            "url": "/players/22105-abraham-lucas/24-10122105/",
+            "archetype": {
+                "name": "Pass Protector - OT",
+                "nameWithoutPosition": "Pass Protector"
+            },
+            "pcPrice": 7400,
+            "pcPriceDisplay": "7,400",
+            "pcPercentChange": "-9.7600",
+            "pcPercentChangeDisplay": "-9.76",
+            "xb1Price": 6500,
+            "xb1PriceDisplay": "6,500",
+            "xb1PercentChange": "0.0000",
+            "xb1PercentChangeDisplay": "0.00",
+            "xbsxPrice": 5250,
+            "xbsxPriceDisplay": "5,250",
+            "xbsxPercentChange": "5.0000",
+            "xbsxPercentChangeDisplay": "5.00",
+            "ps4Price": 7450,
+            "ps4PriceDisplay": "7,450",
+            "ps4PercentChange": "-14.4000",
+            "ps4PercentChangeDisplay": "-14.4",
+            "ps5Price": 4700,
+            "ps5PriceDisplay": "4,700",
+            "ps5PercentChange": "-23.0000",
+            "ps5PercentChangeDisplay": "-23.0",
+            "displayChemAbbreviation": "sea",
+            "displayChemImageUrl": "https://media.mut.gg/24/mutdb/chemistry/6280_bNBGh30.xsl",
+            "displayChemName": "Seattle Seahawks",
+            "releaseDate": "2023-08-14T23:58:11.778231Z"
         }
     ],
     "LE": [
@@ -1550,14 +2237,14 @@
             "xb1PriceDisplay": "425K",
             "xb1PercentChange": "-1.6200",
             "xb1PercentChangeDisplay": "-1.62",
-            "xbsxPrice": 416000,
-            "xbsxPriceDisplay": "416K",
-            "xbsxPercentChange": "-2.8000",
-            "xbsxPercentChangeDisplay": "-2.80",
+            "xbsxPrice": 419000,
+            "xbsxPriceDisplay": "419K",
+            "xbsxPercentChange": "-2.1000",
+            "xbsxPercentChangeDisplay": "-2.10",
             "ps4Price": 422500,
             "ps4PriceDisplay": "422K",
-            "ps4PercentChange": "-0.2400",
-            "ps4PercentChangeDisplay": "-0.24",
+            "ps4PercentChange": "0.0000",
+            "ps4PercentChangeDisplay": "0.00",
             "ps5Price": 416000,
             "ps5PriceDisplay": "416K",
             "ps5PercentChange": "-2.1200",
@@ -1654,6 +2341,92 @@
             "displayChemImageUrl": "https://media.mut.gg/24/mutdb/chemistry/6070_ZgCiDja.xsl",
             "displayChemName": "Arizona Cardinals",
             "releaseDate": "2023-08-14T23:58:11.468822Z"
+        },
+        {
+            "pk": 18715,
+            "externalId": 10113259,
+            "gameSlug": "24",
+            "overall": 83,
+            "maxOverall": 83,
+            "image": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=100,height=100,quality=80,fit=cover,gravity=top/24/mutdb/playeritem/10113259_4e3LuRS.png"
+            },
+            "fullImage": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=208,height=356,quality=80,fit=cover,gravity=top/24/mutdb/playeritem/10113259_4e3LuRS.png"
+            },
+            "borderImage": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=300,height=401,quality=80,fit=cover,gravity=top/24/mutdb/border/315_PqjCnPS.png"
+            },
+            "socialImage": {
+                "url": "https://media.mut.gg/24/mutdb/playeritem/social_10113259.webp"
+            },
+            "cardImage": {
+                "url": "https://media.mut.gg/24/mutdb/playeritem/card_10113259.webp"
+            },
+            "firstName": "Josh",
+            "lastName": "Sweat",
+            "team": {
+                "id": 14,
+                "name": "Eagles",
+                "location": "Philadelphia",
+                "abbreviation": "PHI",
+                "primaryHexColor": "#004C54",
+                "secondaryHexColor": "#A5ACAF",
+                "urlSlug": "philadelphia-eagles"
+            },
+            "program": {
+                "id": 233,
+                "name": "Core Set",
+                "image": {
+                    "url": "https://media.mut.gg/24/mutdb/program/101_Ix7AJmE.png"
+                },
+                "hexColor": "#000000"
+            },
+            "canAuction": true,
+            "canTrade": true,
+            "isMaxedOvr": false,
+            "hasPowerUp": false,
+            "isLtd": false,
+            "tier": 4,
+            "position": {
+                "id": 12,
+                "name": "Right End",
+                "abbreviation": "RE",
+                "basePosition": {
+                    "id": 9,
+                    "name": "Defensive End",
+                    "abbreviation": "DE"
+                }
+            },
+            "url": "/players/13259-josh-sweat/24-10113259/",
+            "archetype": {
+                "name": "Speed Rusher - DE",
+                "nameWithoutPosition": "Speed Rusher"
+            },
+            "pcPrice": 30250,
+            "pcPriceDisplay": "30.2K",
+            "pcPercentChange": "0.7700",
+            "pcPercentChangeDisplay": "0.77",
+            "xb1Price": 36470,
+            "xb1PriceDisplay": "36.5K",
+            "xb1PercentChange": "11.4000",
+            "xb1PercentChangeDisplay": "11.4",
+            "xbsxPrice": 29220,
+            "xbsxPriceDisplay": "29.2K",
+            "xbsxPercentChange": "3.4300",
+            "xbsxPercentChangeDisplay": "3.43",
+            "ps4Price": 31720,
+            "ps4PriceDisplay": "31.7K",
+            "ps4PercentChange": "-2.3100",
+            "ps4PercentChangeDisplay": "-2.31",
+            "ps5Price": 31220,
+            "ps5PriceDisplay": "31.2K",
+            "ps5PercentChange": "15.8000",
+            "ps5PercentChangeDisplay": "15.8",
+            "displayChemAbbreviation": "phi",
+            "displayChemImageUrl": "https://media.mut.gg/24/mutdb/chemistry/6130_PKZ76f1.xsl",
+            "displayChemName": "Philadelphia Eagles",
+            "releaseDate": "2023-08-14T23:58:11.585326Z"
         }
     ],
     "DT": [
@@ -1718,26 +2491,26 @@
                 "name": "Run Stopper - DT",
                 "nameWithoutPosition": "Run Stopper"
             },
-            "pcPrice": 90170,
-            "pcPriceDisplay": "90.2K",
-            "pcPercentChange": "-11.1000",
-            "pcPercentChangeDisplay": "-11.1",
-            "xb1Price": 109670,
-            "xb1PriceDisplay": "110K",
-            "xb1PercentChange": "1.5500",
-            "xb1PercentChangeDisplay": "1.55",
-            "xbsxPrice": 75170,
-            "xbsxPriceDisplay": "75.2K",
-            "xbsxPercentChange": "-6.0400",
-            "xbsxPercentChangeDisplay": "-6.04",
+            "pcPrice": 80500,
+            "pcPriceDisplay": "80.5K",
+            "pcPercentChange": "-20.6000",
+            "pcPercentChangeDisplay": "-20.6",
+            "xb1Price": 108250,
+            "xb1PriceDisplay": "108K",
+            "xb1PercentChange": "0.2300",
+            "xb1PercentChangeDisplay": "0.23",
+            "xbsxPrice": 76670,
+            "xbsxPriceDisplay": "76.7K",
+            "xbsxPercentChange": "-4.1600",
+            "xbsxPercentChangeDisplay": "-4.16",
             "ps4Price": 95920,
             "ps4PriceDisplay": "95.9K",
             "ps4PercentChange": "-7.4800",
             "ps4PercentChangeDisplay": "-7.48",
-            "ps5Price": 79860,
-            "ps5PriceDisplay": "79.9K",
-            "ps5PercentChange": "-6.9900",
-            "ps5PercentChangeDisplay": "-6.99",
+            "ps5Price": 78670,
+            "ps5PriceDisplay": "78.7K",
+            "ps5PercentChange": "-8.3700",
+            "ps5PercentChangeDisplay": "-8.37",
             "displayChemAbbreviation": "sea",
             "displayChemImageUrl": "https://media.mut.gg/24/mutdb/chemistry/6280_bNBGh30.xsl",
             "displayChemName": "Seattle Seahawks",
@@ -1898,22 +2671,108 @@
             "xb1PriceDisplay": "120K",
             "xb1PercentChange": "-0.3500",
             "xb1PercentChangeDisplay": "-0.35",
-            "xbsxPrice": 92900,
-            "xbsxPriceDisplay": "92.9K",
-            "xbsxPercentChange": "-6.7900",
-            "xbsxPercentChangeDisplay": "-6.79",
+            "xbsxPrice": 85670,
+            "xbsxPriceDisplay": "85.7K",
+            "xbsxPercentChange": "-14.0000",
+            "xbsxPercentChangeDisplay": "-14.0",
             "ps4Price": 114000,
             "ps4PriceDisplay": "114K",
             "ps4PercentChange": "3.0100",
             "ps4PercentChangeDisplay": "3.01",
-            "ps5Price": 90670,
-            "ps5PriceDisplay": "90.7K",
-            "ps5PercentChange": "-3.0300",
-            "ps5PercentChangeDisplay": "-3.03",
+            "ps5Price": 89500,
+            "ps5PriceDisplay": "89.5K",
+            "ps5PercentChange": "-4.2800",
+            "ps5PercentChangeDisplay": "-4.28",
             "displayChemAbbreviation": "phi",
             "displayChemImageUrl": "https://media.mut.gg/24/mutdb/chemistry/6130_PKZ76f1.xsl",
             "displayChemName": "Philadelphia Eagles",
             "releaseDate": "2023-09-14T17:56:53.926985Z"
+        },
+        {
+            "pk": 18826,
+            "externalId": 10111297,
+            "gameSlug": "24",
+            "overall": 83,
+            "maxOverall": 83,
+            "image": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=100,height=100,quality=80,fit=cover,gravity=top/24/mutdb/playeritem/10111297_S0H0Glw.png"
+            },
+            "fullImage": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=208,height=356,quality=80,fit=cover,gravity=top/24/mutdb/playeritem/10111297_S0H0Glw.png"
+            },
+            "borderImage": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=300,height=401,quality=80,fit=cover,gravity=top/24/mutdb/border/315_PqjCnPS.png"
+            },
+            "socialImage": {
+                "url": "https://media.mut.gg/24/mutdb/playeritem/social_10111297.webp"
+            },
+            "cardImage": {
+                "url": "https://media.mut.gg/24/mutdb/playeritem/card_10111297.webp"
+            },
+            "firstName": "Fletcher",
+            "lastName": "Cox",
+            "team": {
+                "id": 14,
+                "name": "Eagles",
+                "location": "Philadelphia",
+                "abbreviation": "PHI",
+                "primaryHexColor": "#004C54",
+                "secondaryHexColor": "#A5ACAF",
+                "urlSlug": "philadelphia-eagles"
+            },
+            "program": {
+                "id": 233,
+                "name": "Core Set",
+                "image": {
+                    "url": "https://media.mut.gg/24/mutdb/program/101_Ix7AJmE.png"
+                },
+                "hexColor": "#000000"
+            },
+            "canAuction": true,
+            "canTrade": true,
+            "isMaxedOvr": false,
+            "hasPowerUp": false,
+            "isLtd": false,
+            "tier": 4,
+            "position": {
+                "id": 13,
+                "name": "Defensive Tackle",
+                "abbreviation": "DT",
+                "basePosition": {
+                    "id": 10,
+                    "name": "Defensive Tackle",
+                    "abbreviation": "DT"
+                }
+            },
+            "url": "/players/11297-fletcher-cox/24-10111297/",
+            "archetype": {
+                "name": "Run Stopper - DT",
+                "nameWithoutPosition": "Run Stopper"
+            },
+            "pcPrice": 37720,
+            "pcPriceDisplay": "37.7K",
+            "pcPercentChange": "1.3400",
+            "pcPercentChangeDisplay": "1.34",
+            "xb1Price": 47220,
+            "xb1PriceDisplay": "47.2K",
+            "xb1PercentChange": "-10.2000",
+            "xb1PercentChangeDisplay": "-10.2",
+            "xbsxPrice": 28470,
+            "xbsxPriceDisplay": "28.5K",
+            "xbsxPercentChange": "12.8000",
+            "xbsxPercentChangeDisplay": "12.8",
+            "ps4Price": 44470,
+            "ps4PriceDisplay": "44.5K",
+            "ps4PercentChange": "-13.5000",
+            "ps4PercentChangeDisplay": "-13.5",
+            "ps5Price": 34000,
+            "ps5PriceDisplay": "34K",
+            "ps5PercentChange": "17.4000",
+            "ps5PercentChangeDisplay": "17.4",
+            "displayChemAbbreviation": "phi",
+            "displayChemImageUrl": "https://media.mut.gg/24/mutdb/chemistry/6130_PKZ76f1.xsl",
+            "displayChemName": "Philadelphia Eagles",
+            "releaseDate": "2023-08-14T23:58:11.606358Z"
         }
     ],
     "LOLB": [
@@ -2002,6 +2861,90 @@
             "displayChemImageUrl": "https://media.mut.gg/24/mutdb/chemistry/6130_PKZ76f1.xsl",
             "displayChemName": "Philadelphia Eagles",
             "releaseDate": "2023-08-14T23:58:11.599047Z"
+        },
+        {
+            "pk": 21040,
+            "externalId": 12022700,
+            "gameSlug": "24",
+            "overall": 84,
+            "maxOverall": 84,
+            "image": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=100,height=100,quality=80,fit=cover,gravity=top/24/mutdb/playeritem/12022700.png"
+            },
+            "fullImage": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=208,height=356,quality=80,fit=cover,gravity=top/24/mutdb/playeritem/12022700.png"
+            },
+            "borderImage": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=300,height=401,quality=80,fit=cover,gravity=top/24/mutdb/border/322.png"
+            },
+            "socialImage": {
+                "url": "https://media.mut.gg/24/mutdb/playeritem/social_12022700.webp"
+            },
+            "cardImage": {
+                "url": "https://media.mut.gg/24/mutdb/playeritem/card_12022700.webp"
+            },
+            "firstName": "Nolan",
+            "lastName": "Smith Jr",
+            "team": {
+                "id": 14,
+                "name": "Eagles",
+                "location": "Philadelphia",
+                "abbreviation": "PHI",
+                "primaryHexColor": "#004C54",
+                "secondaryHexColor": "#A5ACAF",
+                "urlSlug": "philadelphia-eagles"
+            },
+            "program": {
+                "id": 241,
+                "name": "Rookie Premiere",
+                "image": null,
+                "hexColor": "#E22726"
+            },
+            "canAuction": false,
+            "canTrade": false,
+            "isMaxedOvr": false,
+            "hasPowerUp": false,
+            "isLtd": false,
+            "tier": 4,
+            "position": {
+                "id": 14,
+                "name": "Left Outside Linebacker",
+                "abbreviation": "LOLB",
+                "basePosition": {
+                    "id": 11,
+                    "name": "Outside Linebacker",
+                    "abbreviation": "OLB"
+                }
+            },
+            "url": "/players/22700-nolan-smith/24-12022700/",
+            "archetype": {
+                "name": "Speed Rusher - OLB",
+                "nameWithoutPosition": "Speed Rusher"
+            },
+            "pcPrice": null,
+            "pcPriceDisplay": "Unknown",
+            "pcPercentChange": null,
+            "pcPercentChangeDisplay": null,
+            "xb1Price": null,
+            "xb1PriceDisplay": "Unknown",
+            "xb1PercentChange": null,
+            "xb1PercentChangeDisplay": null,
+            "xbsxPrice": null,
+            "xbsxPriceDisplay": "Unknown",
+            "xbsxPercentChange": null,
+            "xbsxPercentChangeDisplay": null,
+            "ps4Price": null,
+            "ps4PriceDisplay": "Unknown",
+            "ps4PercentChange": null,
+            "ps4PercentChangeDisplay": null,
+            "ps5Price": null,
+            "ps5PriceDisplay": "Unknown",
+            "ps5PercentChange": null,
+            "ps5PercentChangeDisplay": null,
+            "displayChemAbbreviation": "phi",
+            "displayChemImageUrl": "https://media.mut.gg/24/mutdb/chemistry/6130_PKZ76f1.xsl",
+            "displayChemName": "Philadelphia Eagles",
+            "releaseDate": "2023-08-17T14:38:45.166652Z"
         }
     ],
     "MLB": [
@@ -2090,9 +3033,440 @@
             "displayChemImageUrl": "https://media.mut.gg/24/mutdb/chemistry/6280_bNBGh30.xsl",
             "displayChemName": "Seattle Seahawks",
             "releaseDate": "2023-08-28T17:35:10.510619Z"
+        },
+        {
+            "pk": 21123,
+            "externalId": 15611567,
+            "gameSlug": "24",
+            "overall": 84,
+            "maxOverall": 84,
+            "image": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=100,height=100,quality=80,fit=cover,gravity=top/24/mutdb/playeritem/15611567.png"
+            },
+            "fullImage": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=208,height=356,quality=80,fit=cover,gravity=top/24/mutdb/playeritem/15611567.png"
+            },
+            "borderImage": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=300,height=401,quality=80,fit=cover,gravity=top/24/mutdb/border/325.png"
+            },
+            "socialImage": {
+                "url": "https://media.mut.gg/24/mutdb/playeritem/social_15611567_cojKmfl.webp"
+            },
+            "cardImage": {
+                "url": "https://media.mut.gg/24/mutdb/playeritem/card_15611567.webp"
+            },
+            "firstName": "Bobby",
+            "lastName": "Wagner",
+            "team": {
+                "id": 29,
+                "name": "Seahawks",
+                "location": "Seattle",
+                "abbreviation": "SEA",
+                "primaryHexColor": "#002244",
+                "secondaryHexColor": "#69BE28",
+                "urlSlug": "seattle-seahawks"
+            },
+            "program": {
+                "id": 234,
+                "name": "AKA",
+                "image": {
+                    "url": "https://media.mut.gg/24/mutdb/program/155_W3jcdnQ.png"
+                },
+                "hexColor": "#000000"
+            },
+            "canAuction": true,
+            "canTrade": true,
+            "isMaxedOvr": false,
+            "hasPowerUp": false,
+            "isLtd": false,
+            "tier": 1,
+            "position": {
+                "id": 15,
+                "name": "Middle Linebacker",
+                "abbreviation": "MLB",
+                "basePosition": {
+                    "id": 12,
+                    "name": "Middle Linebacker",
+                    "abbreviation": "MLB"
+                }
+            },
+            "url": "/players/11567-bobby-wagner/24-15611567/",
+            "archetype": {
+                "name": "Run Stopper - MLB",
+                "nameWithoutPosition": "Run Stopper"
+            },
+            "pcPrice": 63460,
+            "pcPriceDisplay": "63.5K",
+            "pcPercentChange": "-10.6000",
+            "pcPercentChangeDisplay": "-10.6",
+            "xb1Price": 68500,
+            "xb1PriceDisplay": "68.5K",
+            "xb1PercentChange": "-3.4400",
+            "xb1PercentChangeDisplay": "-3.44",
+            "xbsxPrice": 56000,
+            "xbsxPriceDisplay": "56K",
+            "xbsxPercentChange": "-7.3800",
+            "xbsxPercentChangeDisplay": "-7.38",
+            "ps4Price": 70460,
+            "ps4PriceDisplay": "70.5K",
+            "ps4PercentChange": "-7.7300",
+            "ps4PercentChangeDisplay": "-7.73",
+            "ps5Price": 67000,
+            "ps5PriceDisplay": "67K",
+            "ps5PercentChange": "-4.2300",
+            "ps5PercentChangeDisplay": "-4.23",
+            "displayChemAbbreviation": "sea",
+            "displayChemImageUrl": "https://media.mut.gg/24/mutdb/chemistry/6280_bNBGh30.xsl",
+            "displayChemName": "Seattle Seahawks",
+            "releaseDate": "2023-08-28T17:35:10.511860Z"
+        },
+        {
+            "pk": 18082,
+            "externalId": 16022402,
+            "gameSlug": "24",
+            "overall": 85,
+            "maxOverall": 85,
+            "image": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=100,height=100,quality=80,fit=cover,gravity=top/24/mutdb/playeritem/16022402_5NPYchz.png"
+            },
+            "fullImage": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=208,height=356,quality=80,fit=cover,gravity=top/24/mutdb/playeritem/16022402_5NPYchz.png"
+            },
+            "borderImage": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=300,height=401,quality=80,fit=cover,gravity=top/24/mutdb/border/311_i251MX5.png"
+            },
+            "socialImage": {
+                "url": "https://media.mut.gg/24/mutdb/playeritem/social_16022402.webp"
+            },
+            "cardImage": {
+                "url": "https://media.mut.gg/24/mutdb/playeritem/card_16022402.webp"
+            },
+            "firstName": "Nakobe",
+            "lastName": "Dean",
+            "team": {
+                "id": 14,
+                "name": "Eagles",
+                "location": "Philadelphia",
+                "abbreviation": "PHI",
+                "primaryHexColor": "#004C54",
+                "secondaryHexColor": "#A5ACAF",
+                "urlSlug": "philadelphia-eagles"
+            },
+            "program": {
+                "id": 232,
+                "name": "Team Builders",
+                "image": {
+                    "url": "https://media.mut.gg/24/mutdb/program/160_IUY3vxJ.png"
+                },
+                "hexColor": "#000000"
+            },
+            "canAuction": true,
+            "canTrade": true,
+            "isMaxedOvr": false,
+            "hasPowerUp": false,
+            "isLtd": false,
+            "tier": 1,
+            "position": {
+                "id": 15,
+                "name": "Middle Linebacker",
+                "abbreviation": "MLB",
+                "basePosition": {
+                    "id": 12,
+                    "name": "Middle Linebacker",
+                    "abbreviation": "MLB"
+                }
+            },
+            "url": "/players/22402-nakobe-dean/24-16022402/",
+            "archetype": {
+                "name": "Field General - MLB",
+                "nameWithoutPosition": "Field General"
+            },
+            "pcPrice": 112680,
+            "pcPriceDisplay": "113K",
+            "pcPercentChange": "-2.5800",
+            "pcPercentChangeDisplay": "-2.58",
+            "xb1Price": 130000,
+            "xb1PriceDisplay": "130K",
+            "xb1PercentChange": "0.0000",
+            "xb1PercentChangeDisplay": "0.00",
+            "xbsxPrice": 94999,
+            "xbsxPriceDisplay": "95K",
+            "xbsxPercentChange": "-1.9700",
+            "xbsxPercentChangeDisplay": "-1.97",
+            "ps4Price": 130000,
+            "ps4PriceDisplay": "130K",
+            "ps4PercentChange": "-8.0900",
+            "ps4PercentChangeDisplay": "-8.09",
+            "ps5Price": 93500,
+            "ps5PriceDisplay": "93.5K",
+            "ps5PercentChange": "-1.7500",
+            "ps5PercentChangeDisplay": "-1.75",
+            "displayChemAbbreviation": "phi",
+            "displayChemImageUrl": "https://media.mut.gg/24/mutdb/chemistry/6130_PKZ76f1.xsl",
+            "displayChemName": "Philadelphia Eagles",
+            "releaseDate": "2023-08-14T23:58:11.465226Z"
+        },
+        {
+            "pk": 18588,
+            "externalId": 10121316,
+            "gameSlug": "24",
+            "overall": 81,
+            "maxOverall": 81,
+            "image": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=100,height=100,quality=80,fit=cover,gravity=top/24/mutdb/playeritem/10121316_VkQuQDD.png"
+            },
+            "fullImage": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=208,height=356,quality=80,fit=cover,gravity=top/24/mutdb/playeritem/10121316_VkQuQDD.png"
+            },
+            "borderImage": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=300,height=401,quality=80,fit=cover,gravity=top/24/mutdb/border/315_PqjCnPS.png"
+            },
+            "socialImage": {
+                "url": "https://media.mut.gg/24/mutdb/playeritem/social_10121316.webp"
+            },
+            "cardImage": {
+                "url": "https://media.mut.gg/24/mutdb/playeritem/card_10121316.webp"
+            },
+            "firstName": "Jordyn",
+            "lastName": "Brooks",
+            "team": {
+                "id": 29,
+                "name": "Seahawks",
+                "location": "Seattle",
+                "abbreviation": "SEA",
+                "primaryHexColor": "#002244",
+                "secondaryHexColor": "#69BE28",
+                "urlSlug": "seattle-seahawks"
+            },
+            "program": {
+                "id": 233,
+                "name": "Core Set",
+                "image": {
+                    "url": "https://media.mut.gg/24/mutdb/program/101_Ix7AJmE.png"
+                },
+                "hexColor": "#000000"
+            },
+            "canAuction": true,
+            "canTrade": true,
+            "isMaxedOvr": false,
+            "hasPowerUp": false,
+            "isLtd": false,
+            "tier": 4,
+            "position": {
+                "id": 15,
+                "name": "Middle Linebacker",
+                "abbreviation": "MLB",
+                "basePosition": {
+                    "id": 12,
+                    "name": "Middle Linebacker",
+                    "abbreviation": "MLB"
+                }
+            },
+            "url": "/players/21316-jordyn-brooks/24-10121316/",
+            "archetype": {
+                "name": "Run Stopper - MLB",
+                "nameWithoutPosition": "Run Stopper"
+            },
+            "pcPrice": 9870,
+            "pcPriceDisplay": "9,870",
+            "pcPercentChange": "-10.0000",
+            "pcPercentChangeDisplay": "-10.0",
+            "xb1Price": 14950,
+            "xb1PriceDisplay": "14.9K",
+            "xb1PercentChange": "27.0000",
+            "xb1PercentChangeDisplay": "27.0",
+            "xbsxPrice": 10870,
+            "xbsxPriceDisplay": "10.9K",
+            "xbsxPercentChange": "6.3600",
+            "xbsxPercentChangeDisplay": "6.36",
+            "ps4Price": 12000,
+            "ps4PriceDisplay": "12K",
+            "ps4PercentChange": "-1.8000",
+            "ps4PercentChangeDisplay": "-1.80",
+            "ps5Price": 11470,
+            "ps5PriceDisplay": "11.5K",
+            "ps5PercentChange": "19.9000",
+            "ps5PercentChangeDisplay": "19.9",
+            "displayChemAbbreviation": "sea",
+            "displayChemImageUrl": "https://media.mut.gg/24/mutdb/chemistry/6280_bNBGh30.xsl",
+            "displayChemName": "Seattle Seahawks",
+            "releaseDate": "2023-08-14T23:58:11.561517Z"
         }
     ],
-    "ROLB": [],
+    "ROLB": [
+        {
+            "pk": 21231,
+            "externalId": 19002552,
+            "gameSlug": "24",
+            "overall": 83,
+            "maxOverall": 83,
+            "image": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=100,height=100,quality=80,fit=cover,gravity=top/24/mutdb/playeritem/19002552.png"
+            },
+            "fullImage": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=208,height=356,quality=80,fit=cover,gravity=top/24/mutdb/playeritem/19002552.png"
+            },
+            "borderImage": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=300,height=401,quality=80,fit=cover,gravity=top/24/mutdb/border/333.png"
+            },
+            "socialImage": {
+                "url": "https://media.mut.gg/24/mutdb/playeritem/social_19002552.webp"
+            },
+            "cardImage": {
+                "url": "https://media.mut.gg/24/mutdb/playeritem/card_19002552.webp"
+            },
+            "firstName": "Frank",
+            "lastName": "Clark",
+            "team": {
+                "id": 5,
+                "name": "Broncos",
+                "location": "Denver",
+                "abbreviation": "DEN",
+                "primaryHexColor": "#FB4F14",
+                "secondaryHexColor": "#002244",
+                "urlSlug": "denver-broncos"
+            },
+            "program": {
+                "id": 247,
+                "name": "Ultimate Kickoff",
+                "image": {
+                    "url": "https://media.mut.gg/24/mutdb/program/190.png"
+                },
+                "hexColor": "#000000"
+            },
+            "canAuction": true,
+            "canTrade": true,
+            "isMaxedOvr": false,
+            "hasPowerUp": false,
+            "isLtd": false,
+            "tier": 4,
+            "position": {
+                "id": 16,
+                "name": "Right Outside Linebacker",
+                "abbreviation": "ROLB",
+                "basePosition": {
+                    "id": 11,
+                    "name": "Outside Linebacker",
+                    "abbreviation": "OLB"
+                }
+            },
+            "url": "/players/2552-frank-clark/24-19002552/",
+            "archetype": {
+                "name": "Power rusher - OLB",
+                "nameWithoutPosition": "Power rusher"
+            },
+            "pcPrice": 30220,
+            "pcPriceDisplay": "30.2K",
+            "pcPercentChange": "0.8300",
+            "pcPercentChangeDisplay": "0.83",
+            "xb1Price": 31470,
+            "xb1PriceDisplay": "31.5K",
+            "xb1PercentChange": "4.1400",
+            "xb1PercentChangeDisplay": "4.14",
+            "xbsxPrice": 28000,
+            "xbsxPriceDisplay": "28K",
+            "xbsxPercentChange": "-1.6500",
+            "xbsxPercentChangeDisplay": "-1.65",
+            "ps4Price": 31220,
+            "ps4PriceDisplay": "31.2K",
+            "ps4PercentChange": "0.8100",
+            "ps4PercentChangeDisplay": "0.81",
+            "ps5Price": 29470,
+            "ps5PriceDisplay": "29.5K",
+            "ps5PercentChange": "1.6200",
+            "ps5PercentChangeDisplay": "1.62",
+            "displayChemAbbreviation": "den",
+            "displayChemImageUrl": "https://media.mut.gg/24/mutdb/chemistry/6040_xpvIRKG.xsl",
+            "displayChemName": "Denver Broncos",
+            "releaseDate": "2023-09-07T19:07:02.567257Z"
+        },
+        {
+            "pk": 21143,
+            "externalId": 18020591,
+            "gameSlug": "24",
+            "overall": 85,
+            "maxOverall": 85,
+            "image": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=100,height=100,quality=80,fit=cover,gravity=top/24/mutdb/playeritem/18020591.png"
+            },
+            "fullImage": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=208,height=356,quality=80,fit=cover,gravity=top/24/mutdb/playeritem/18020591.png"
+            },
+            "borderImage": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=300,height=401,quality=80,fit=cover,gravity=top/24/mutdb/border/330.png"
+            },
+            "socialImage": {
+                "url": "https://media.mut.gg/24/mutdb/playeritem/social_18020591_nv7p3JS.webp"
+            },
+            "cardImage": {
+                "url": "https://media.mut.gg/24/mutdb/playeritem/card_18020591.webp"
+            },
+            "firstName": "T.J.",
+            "lastName": "Edwards",
+            "team": {
+                "id": 2,
+                "name": "Bears",
+                "location": "Chicago",
+                "abbreviation": "CHI",
+                "primaryHexColor": "#0B162A",
+                "secondaryHexColor": "#C83803",
+                "urlSlug": "chicago-bears"
+            },
+            "program": {
+                "id": 245,
+                "name": "Campus Heroes",
+                "image": {
+                    "url": "https://media.mut.gg/24/mutdb/program/180.png"
+                },
+                "hexColor": "#000000"
+            },
+            "canAuction": true,
+            "canTrade": true,
+            "isMaxedOvr": false,
+            "hasPowerUp": false,
+            "isLtd": false,
+            "tier": 1,
+            "position": {
+                "id": 16,
+                "name": "Right Outside Linebacker",
+                "abbreviation": "ROLB",
+                "basePosition": {
+                    "id": 11,
+                    "name": "Outside Linebacker",
+                    "abbreviation": "OLB"
+                }
+            },
+            "url": "/players/20591-tj-edwards/24-18020591/",
+            "archetype": {
+                "name": "Run Stopper - OLB",
+                "nameWithoutPosition": "Run Stopper"
+            },
+            "pcPrice": 87670,
+            "pcPriceDisplay": "87.7K",
+            "pcPercentChange": "0.0000",
+            "pcPercentChangeDisplay": "0.00",
+            "xb1Price": 88170,
+            "xb1PriceDisplay": "88.2K",
+            "xb1PercentChange": "3.5200",
+            "xb1PercentChangeDisplay": "3.52",
+            "xbsxPrice": 79000,
+            "xbsxPriceDisplay": "79K",
+            "xbsxPercentChange": "-1.8600",
+            "xbsxPercentChangeDisplay": "-1.86",
+            "ps4Price": 90670,
+            "ps4PriceDisplay": "90.7K",
+            "ps4PercentChange": "1.1200",
+            "ps4PercentChangeDisplay": "1.12",
+            "ps5Price": 81000,
+            "ps5PriceDisplay": "81K",
+            "ps5PercentChange": "3.1800",
+            "ps5PercentChangeDisplay": "3.18",
+            "displayChemAbbreviation": "chi",
+            "displayChemImageUrl": "https://media.mut.gg/24/mutdb/chemistry/6010_D76AFaR.xsl",
+            "displayChemName": "Chicago Bears",
+            "releaseDate": "2023-08-31T19:47:36.153006Z"
+        }
+    ],
     "CB": [
         {
             "pk": 21053,
@@ -2179,6 +3553,350 @@
             "displayChemImageUrl": "https://media.mut.gg/24/mutdb/chemistry/6280_bNBGh30.xsl",
             "displayChemName": "Seattle Seahawks",
             "releaseDate": "2023-08-19T15:12:45.524462Z"
+        },
+        {
+            "pk": 18544,
+            "externalId": 10122247,
+            "gameSlug": "24",
+            "overall": 85,
+            "maxOverall": 85,
+            "image": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=100,height=100,quality=80,fit=cover,gravity=top/24/mutdb/playeritem/10122247_FsXcGDM.png"
+            },
+            "fullImage": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=208,height=356,quality=80,fit=cover,gravity=top/24/mutdb/playeritem/10122247_FsXcGDM.png"
+            },
+            "borderImage": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=300,height=401,quality=80,fit=cover,gravity=top/24/mutdb/border/315_PqjCnPS.png"
+            },
+            "socialImage": {
+                "url": "https://media.mut.gg/24/mutdb/playeritem/social_10122247.webp"
+            },
+            "cardImage": {
+                "url": "https://media.mut.gg/24/mutdb/playeritem/card_10122247.webp"
+            },
+            "firstName": "Tariq",
+            "lastName": "Woolen",
+            "team": {
+                "id": 29,
+                "name": "Seahawks",
+                "location": "Seattle",
+                "abbreviation": "SEA",
+                "primaryHexColor": "#002244",
+                "secondaryHexColor": "#69BE28",
+                "urlSlug": "seattle-seahawks"
+            },
+            "program": {
+                "id": 233,
+                "name": "Core Set",
+                "image": {
+                    "url": "https://media.mut.gg/24/mutdb/program/101_Ix7AJmE.png"
+                },
+                "hexColor": "#000000"
+            },
+            "canAuction": true,
+            "canTrade": true,
+            "isMaxedOvr": false,
+            "hasPowerUp": false,
+            "isLtd": false,
+            "tier": 4,
+            "position": {
+                "id": 17,
+                "name": "Cornerback",
+                "abbreviation": "CB",
+                "basePosition": {
+                    "id": 13,
+                    "name": "Cornerback",
+                    "abbreviation": "CB"
+                }
+            },
+            "url": "/players/22247-tariq-woolen/24-10122247/",
+            "archetype": {
+                "name": "Zone - CB",
+                "nameWithoutPosition": "Zone"
+            },
+            "pcPrice": 89900,
+            "pcPriceDisplay": "89.9K",
+            "pcPercentChange": "1.6700",
+            "pcPercentChangeDisplay": "1.67",
+            "xb1Price": 99400,
+            "xb1PriceDisplay": "99.4K",
+            "xb1PercentChange": "1.7700",
+            "xb1PercentChangeDisplay": "1.77",
+            "xbsxPrice": 79670,
+            "xbsxPriceDisplay": "79.7K",
+            "xbsxPercentChange": "-2.4500",
+            "xbsxPercentChangeDisplay": "-2.45",
+            "ps4Price": 98170,
+            "ps4PriceDisplay": "98.2K",
+            "ps4PercentChange": "-0.5100",
+            "ps4PercentChangeDisplay": "-0.51",
+            "ps5Price": 81170,
+            "ps5PriceDisplay": "81.2K",
+            "ps5PercentChange": "0.0000",
+            "ps5PercentChangeDisplay": "0.00",
+            "displayChemAbbreviation": "sea",
+            "displayChemImageUrl": "https://media.mut.gg/24/mutdb/chemistry/6280_bNBGh30.xsl",
+            "displayChemName": "Seattle Seahawks",
+            "releaseDate": "2023-08-14T23:58:11.553220Z"
+        },
+        {
+            "pk": 18874,
+            "externalId": 10101426,
+            "gameSlug": "24",
+            "overall": 85,
+            "maxOverall": 85,
+            "image": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=100,height=100,quality=80,fit=cover,gravity=top/24/mutdb/playeritem/10101426_ba7XI6n.png"
+            },
+            "fullImage": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=208,height=356,quality=80,fit=cover,gravity=top/24/mutdb/playeritem/10101426_ba7XI6n.png"
+            },
+            "borderImage": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=300,height=401,quality=80,fit=cover,gravity=top/24/mutdb/border/315_PqjCnPS.png"
+            },
+            "socialImage": {
+                "url": "https://media.mut.gg/24/mutdb/playeritem/social_10101426.webp"
+            },
+            "cardImage": {
+                "url": "https://media.mut.gg/24/mutdb/playeritem/card_10101426.webp"
+            },
+            "firstName": "Darius",
+            "lastName": "Slay Jr",
+            "team": {
+                "id": 14,
+                "name": "Eagles",
+                "location": "Philadelphia",
+                "abbreviation": "PHI",
+                "primaryHexColor": "#004C54",
+                "secondaryHexColor": "#A5ACAF",
+                "urlSlug": "philadelphia-eagles"
+            },
+            "program": {
+                "id": 233,
+                "name": "Core Set",
+                "image": {
+                    "url": "https://media.mut.gg/24/mutdb/program/101_Ix7AJmE.png"
+                },
+                "hexColor": "#000000"
+            },
+            "canAuction": true,
+            "canTrade": true,
+            "isMaxedOvr": false,
+            "hasPowerUp": false,
+            "isLtd": false,
+            "tier": 4,
+            "position": {
+                "id": 17,
+                "name": "Cornerback",
+                "abbreviation": "CB",
+                "basePosition": {
+                    "id": 13,
+                    "name": "Cornerback",
+                    "abbreviation": "CB"
+                }
+            },
+            "url": "/players/1426-darius-slay-jr/24-10101426/",
+            "archetype": {
+                "name": "Zone - CB",
+                "nameWithoutPosition": "Zone"
+            },
+            "pcPrice": 92170,
+            "pcPriceDisplay": "92.2K",
+            "pcPercentChange": "1.2300",
+            "pcPercentChangeDisplay": "1.23",
+            "xb1Price": 95000,
+            "xb1PriceDisplay": "95K",
+            "xb1PercentChange": "-3.7200",
+            "xb1PercentChangeDisplay": "-3.72",
+            "xbsxPrice": 84670,
+            "xbsxPriceDisplay": "84.7K",
+            "xbsxPercentChange": "3.0400",
+            "xbsxPercentChangeDisplay": "3.04",
+            "ps4Price": 95680,
+            "ps4PriceDisplay": "95.7K",
+            "ps4PercentChange": "0.0000",
+            "ps4PercentChangeDisplay": "0.00",
+            "ps5Price": 85500,
+            "ps5PriceDisplay": "85.5K",
+            "ps5PercentChange": "-1.6300",
+            "ps5PercentChangeDisplay": "-1.63",
+            "displayChemAbbreviation": "phi",
+            "displayChemImageUrl": "https://media.mut.gg/24/mutdb/chemistry/6130_PKZ76f1.xsl",
+            "displayChemName": "Philadelphia Eagles",
+            "releaseDate": "2023-08-14T23:58:11.615332Z"
+        },
+        {
+            "pk": 21014,
+            "externalId": 11500487,
+            "gameSlug": "24",
+            "overall": 80,
+            "maxOverall": 87,
+            "image": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=100,height=100,quality=80,fit=cover,gravity=top/24/mutdb/playeritem/11500487.jpg"
+            },
+            "fullImage": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=208,height=356,quality=80,fit=cover,gravity=top/24/mutdb/playeritem/11500487.jpg"
+            },
+            "borderImage": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=300,height=401,quality=80,fit=cover,gravity=top/24/mutdb/border/321.png"
+            },
+            "socialImage": {
+                "url": "https://media.mut.gg/24/mutdb/playeritem/social_11500487.webp"
+            },
+            "cardImage": {
+                "url": "https://media.mut.gg/24/mutdb/playeritem/card_11500487_34GwCs1.webp"
+            },
+            "firstName": "Ronde",
+            "lastName": "Barber",
+            "team": {
+                "id": 7,
+                "name": "Buccaneers",
+                "location": "Tampa Bay",
+                "abbreviation": "TB",
+                "primaryHexColor": "#D50A0A",
+                "secondaryHexColor": "#34302B",
+                "urlSlug": "tampa-bay-buccaneers"
+            },
+            "program": {
+                "id": 240,
+                "name": "Team Captains",
+                "image": {
+                    "url": "https://media.mut.gg/24/mutdb/program/115.png"
+                },
+                "hexColor": "#C1A465"
+            },
+            "canAuction": false,
+            "canTrade": false,
+            "isMaxedOvr": false,
+            "hasPowerUp": false,
+            "isLtd": false,
+            "tier": 4,
+            "position": {
+                "id": 17,
+                "name": "Cornerback",
+                "abbreviation": "CB",
+                "basePosition": {
+                    "id": 13,
+                    "name": "Cornerback",
+                    "abbreviation": "CB"
+                }
+            },
+            "url": "/players/487-ronde-barber/24-11500487/",
+            "archetype": {
+                "name": "Slot - CB",
+                "nameWithoutPosition": "Slot"
+            },
+            "pcPrice": null,
+            "pcPriceDisplay": "Unknown",
+            "pcPercentChange": null,
+            "pcPercentChangeDisplay": null,
+            "xb1Price": null,
+            "xb1PriceDisplay": "Unknown",
+            "xb1PercentChange": null,
+            "xb1PercentChangeDisplay": null,
+            "xbsxPrice": null,
+            "xbsxPriceDisplay": "Unknown",
+            "xbsxPercentChange": null,
+            "xbsxPercentChangeDisplay": null,
+            "ps4Price": null,
+            "ps4PriceDisplay": "Unknown",
+            "ps4PercentChange": null,
+            "ps4PercentChangeDisplay": null,
+            "ps5Price": null,
+            "ps5PriceDisplay": "Unknown",
+            "ps5PercentChange": null,
+            "ps5PercentChangeDisplay": null,
+            "displayChemAbbreviation": "tb",
+            "displayChemImageUrl": "https://media.mut.gg/24/mutdb/chemistry/6060_a7bq8Xc.xsl",
+            "displayChemName": "Tampa Bay Buccaneers",
+            "releaseDate": "2023-08-15T18:21:26.956434Z"
+        },
+        {
+            "pk": 18775,
+            "externalId": 10112609,
+            "gameSlug": "24",
+            "overall": 82,
+            "maxOverall": 82,
+            "image": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=100,height=100,quality=80,fit=cover,gravity=top/24/mutdb/playeritem/10112609_AjVSXTA.png"
+            },
+            "fullImage": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=208,height=356,quality=80,fit=cover,gravity=top/24/mutdb/playeritem/10112609_AjVSXTA.png"
+            },
+            "borderImage": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=300,height=401,quality=80,fit=cover,gravity=top/24/mutdb/border/315_PqjCnPS.png"
+            },
+            "socialImage": {
+                "url": "https://media.mut.gg/24/mutdb/playeritem/social_10112609.webp"
+            },
+            "cardImage": {
+                "url": "https://media.mut.gg/24/mutdb/playeritem/card_10112609.webp"
+            },
+            "firstName": "Rasul",
+            "lastName": "Douglas",
+            "team": {
+                "id": 21,
+                "name": "Packers",
+                "location": "Green Bay",
+                "abbreviation": "GB",
+                "primaryHexColor": "#203731",
+                "secondaryHexColor": "#FFB612",
+                "urlSlug": "green-bay-packers"
+            },
+            "program": {
+                "id": 233,
+                "name": "Core Set",
+                "image": {
+                    "url": "https://media.mut.gg/24/mutdb/program/101_Ix7AJmE.png"
+                },
+                "hexColor": "#000000"
+            },
+            "canAuction": true,
+            "canTrade": true,
+            "isMaxedOvr": false,
+            "hasPowerUp": false,
+            "isLtd": false,
+            "tier": 4,
+            "position": {
+                "id": 17,
+                "name": "Cornerback",
+                "abbreviation": "CB",
+                "basePosition": {
+                    "id": 13,
+                    "name": "Cornerback",
+                    "abbreviation": "CB"
+                }
+            },
+            "url": "/players/12609-rasul-douglas/24-10112609/",
+            "archetype": {
+                "name": "Zone - CB",
+                "nameWithoutPosition": "Zone"
+            },
+            "pcPrice": 18550,
+            "pcPriceDisplay": "18.6K",
+            "pcPercentChange": "-6.3100",
+            "pcPercentChangeDisplay": "-6.31",
+            "xb1Price": 22250,
+            "xb1PriceDisplay": "22.2K",
+            "xb1PercentChange": "9.6100",
+            "xb1PercentChangeDisplay": "9.61",
+            "xbsxPrice": 20000,
+            "xbsxPriceDisplay": "20K",
+            "xbsxPercentChange": "17.6000",
+            "xbsxPercentChangeDisplay": "17.6",
+            "ps4Price": 20000,
+            "ps4PriceDisplay": "20K",
+            "ps4PercentChange": "-2.4400",
+            "ps4PercentChangeDisplay": "-2.44",
+            "ps5Price": 19000,
+            "ps5PriceDisplay": "19K",
+            "ps5PercentChange": "5.2600",
+            "ps5PercentChangeDisplay": "5.26",
+            "displayChemAbbreviation": "gb",
+            "displayChemImageUrl": "https://media.mut.gg/24/mutdb/chemistry/6200_NhWjox2.xsl",
+            "displayChemName": "Green Bay Packers",
+            "releaseDate": "2023-08-14T23:58:11.596786Z"
         }
     ],
     "FS": [
@@ -2267,6 +3985,92 @@
             "displayChemImageUrl": "https://media.mut.gg/24/mutdb/chemistry/6280_bNBGh30.xsl",
             "displayChemName": "Seattle Seahawks",
             "releaseDate": "2023-08-14T23:58:11.464842Z"
+        },
+        {
+            "pk": 18846,
+            "externalId": 10102634,
+            "gameSlug": "24",
+            "overall": 83,
+            "maxOverall": 83,
+            "image": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=100,height=100,quality=80,fit=cover,gravity=top/24/mutdb/playeritem/10102634_3PYnsUy.png"
+            },
+            "fullImage": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=208,height=356,quality=80,fit=cover,gravity=top/24/mutdb/playeritem/10102634_3PYnsUy.png"
+            },
+            "borderImage": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=300,height=401,quality=80,fit=cover,gravity=top/24/mutdb/border/315_PqjCnPS.png"
+            },
+            "socialImage": {
+                "url": "https://media.mut.gg/24/mutdb/playeritem/social_10102634.webp"
+            },
+            "cardImage": {
+                "url": "https://media.mut.gg/24/mutdb/playeritem/card_10102634.webp"
+            },
+            "firstName": "Quandre",
+            "lastName": "Diggs",
+            "team": {
+                "id": 29,
+                "name": "Seahawks",
+                "location": "Seattle",
+                "abbreviation": "SEA",
+                "primaryHexColor": "#002244",
+                "secondaryHexColor": "#69BE28",
+                "urlSlug": "seattle-seahawks"
+            },
+            "program": {
+                "id": 233,
+                "name": "Core Set",
+                "image": {
+                    "url": "https://media.mut.gg/24/mutdb/program/101_Ix7AJmE.png"
+                },
+                "hexColor": "#000000"
+            },
+            "canAuction": true,
+            "canTrade": true,
+            "isMaxedOvr": false,
+            "hasPowerUp": false,
+            "isLtd": false,
+            "tier": 4,
+            "position": {
+                "id": 18,
+                "name": "Free Safety",
+                "abbreviation": "FS",
+                "basePosition": {
+                    "id": 14,
+                    "name": "Safety",
+                    "abbreviation": "S"
+                }
+            },
+            "url": "/players/2634-quandre-diggs/24-10102634/",
+            "archetype": {
+                "name": "Zone - S",
+                "nameWithoutPosition": "Zone"
+            },
+            "pcPrice": 30220,
+            "pcPriceDisplay": "30.2K",
+            "pcPercentChange": "0.8300",
+            "pcPercentChangeDisplay": "0.83",
+            "xb1Price": 27220,
+            "xb1PriceDisplay": "27.2K",
+            "xb1PercentChange": "-1.6300",
+            "xb1PercentChangeDisplay": "-1.63",
+            "xbsxPrice": 29470,
+            "xbsxPriceDisplay": "29.5K",
+            "xbsxPercentChange": "3.5100",
+            "xbsxPercentChangeDisplay": "3.51",
+            "ps4Price": 33333,
+            "ps4PriceDisplay": "33.3K",
+            "ps4PercentChange": "-16.6000",
+            "ps4PercentChangeDisplay": "-16.6",
+            "ps5Price": 26720,
+            "ps5PriceDisplay": "26.7K",
+            "ps5PercentChange": "-1.0400",
+            "ps5PercentChangeDisplay": "-1.04",
+            "displayChemAbbreviation": "sea",
+            "displayChemImageUrl": "https://media.mut.gg/24/mutdb/chemistry/6280_bNBGh30.xsl",
+            "displayChemName": "Seattle Seahawks",
+            "releaseDate": "2023-08-14T23:58:11.610101Z"
         }
     ],
     "SS": [
@@ -2331,32 +4135,292 @@
                 "name": "Run Support - S",
                 "nameWithoutPosition": "Run Support"
             },
-            "pcPrice": 295000,
-            "pcPriceDisplay": "295K",
-            "pcPercentChange": "-14.7000",
-            "pcPercentChangeDisplay": "-14.7",
-            "xb1Price": 359550,
-            "xb1PriceDisplay": "360K",
-            "xb1PercentChange": "-2.6500",
-            "xb1PercentChangeDisplay": "-2.65",
-            "xbsxPrice": 266000,
-            "xbsxPriceDisplay": "266K",
-            "xbsxPercentChange": "-8.4500",
-            "xbsxPercentChangeDisplay": "-8.45",
-            "ps4Price": 378050,
-            "ps4PriceDisplay": "378K",
-            "ps4PercentChange": "0.0000",
-            "ps4PercentChangeDisplay": "0.00",
-            "ps5Price": 280550,
-            "ps5PriceDisplay": "281K",
-            "ps5PercentChange": "-13.0000",
-            "ps5PercentChangeDisplay": "-13.0",
+            "pcPrice": 330550,
+            "pcPriceDisplay": "331K",
+            "pcPercentChange": "-4.4700",
+            "pcPercentChangeDisplay": "-4.47",
+            "xb1Price": 325550,
+            "xb1PriceDisplay": "326K",
+            "xb1PercentChange": "-11.9000",
+            "xb1PercentChangeDisplay": "-11.9",
+            "xbsxPrice": 279000,
+            "xbsxPriceDisplay": "279K",
+            "xbsxPercentChange": "-3.9800",
+            "xbsxPercentChangeDisplay": "-3.98",
+            "ps4Price": 324000,
+            "ps4PriceDisplay": "324K",
+            "ps4PercentChange": "-14.3000",
+            "ps4PercentChangeDisplay": "-14.3",
+            "ps5Price": 293000,
+            "ps5PriceDisplay": "293K",
+            "ps5PercentChange": "-9.1600",
+            "ps5PercentChangeDisplay": "-9.16",
             "displayChemAbbreviation": "sea",
             "displayChemImageUrl": "https://media.mut.gg/24/mutdb/chemistry/6280_bNBGh30.xsl",
             "displayChemName": "Seattle Seahawks",
             "releaseDate": "2023-08-26T14:38:47.746519Z"
+        },
+        {
+            "pk": 18800,
+            "externalId": 10112524,
+            "gameSlug": "24",
+            "overall": 83,
+            "maxOverall": 83,
+            "image": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=100,height=100,quality=80,fit=cover,gravity=top/24/mutdb/playeritem/10112524_h0cPIgy.png"
+            },
+            "fullImage": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=208,height=356,quality=80,fit=cover,gravity=top/24/mutdb/playeritem/10112524_h0cPIgy.png"
+            },
+            "borderImage": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=300,height=401,quality=80,fit=cover,gravity=top/24/mutdb/border/315_PqjCnPS.png"
+            },
+            "socialImage": {
+                "url": "https://media.mut.gg/24/mutdb/playeritem/social_10112524.webp"
+            },
+            "cardImage": {
+                "url": "https://media.mut.gg/24/mutdb/playeritem/card_10112524.webp"
+            },
+            "firstName": "Jamal",
+            "lastName": "Adams",
+            "team": {
+                "id": 29,
+                "name": "Seahawks",
+                "location": "Seattle",
+                "abbreviation": "SEA",
+                "primaryHexColor": "#002244",
+                "secondaryHexColor": "#69BE28",
+                "urlSlug": "seattle-seahawks"
+            },
+            "program": {
+                "id": 233,
+                "name": "Core Set",
+                "image": {
+                    "url": "https://media.mut.gg/24/mutdb/program/101_Ix7AJmE.png"
+                },
+                "hexColor": "#000000"
+            },
+            "canAuction": true,
+            "canTrade": true,
+            "isMaxedOvr": false,
+            "hasPowerUp": false,
+            "isLtd": false,
+            "tier": 4,
+            "position": {
+                "id": 19,
+                "name": "Strong Safety",
+                "abbreviation": "SS",
+                "basePosition": {
+                    "id": 14,
+                    "name": "Safety",
+                    "abbreviation": "S"
+                }
+            },
+            "url": "/players/12524-jamal-adams/24-10112524/",
+            "archetype": {
+                "name": "Run Support - S",
+                "nameWithoutPosition": "Run Support"
+            },
+            "pcPrice": 29220,
+            "pcPriceDisplay": "29.2K",
+            "pcPercentChange": "-2.6000",
+            "pcPercentChangeDisplay": "-2.60",
+            "xb1Price": 33720,
+            "xb1PriceDisplay": "33.7K",
+            "xb1PercentChange": "-11.2000",
+            "xb1PercentChangeDisplay": "-11.2",
+            "xbsxPrice": 29970,
+            "xbsxPriceDisplay": "30K",
+            "xbsxPercentChange": "3.4500",
+            "xbsxPercentChangeDisplay": "3.45",
+            "ps4Price": 39250,
+            "ps4PriceDisplay": "39.2K",
+            "ps4PercentChange": "6.5100",
+            "ps4PercentChangeDisplay": "6.51",
+            "ps5Price": 30220,
+            "ps5PriceDisplay": "30.2K",
+            "ps5PercentChange": "5.2200",
+            "ps5PercentChangeDisplay": "5.22",
+            "displayChemAbbreviation": "sea",
+            "displayChemImageUrl": "https://media.mut.gg/24/mutdb/chemistry/6280_bNBGh30.xsl",
+            "displayChemName": "Seattle Seahawks",
+            "releaseDate": "2023-08-14T23:58:11.601488Z"
         }
     ],
-    "K": [],
-    "P": []
+    "K": [
+        {
+            "pk": 18843,
+            "externalId": 10102772,
+            "gameSlug": "24",
+            "overall": 83,
+            "maxOverall": 83,
+            "image": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=100,height=100,quality=80,fit=cover,gravity=top/24/mutdb/playeritem/10102772_lMYdeBE.png"
+            },
+            "fullImage": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=208,height=356,quality=80,fit=cover,gravity=top/24/mutdb/playeritem/10102772_lMYdeBE.png"
+            },
+            "borderImage": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=300,height=401,quality=80,fit=cover,gravity=top/24/mutdb/border/315_PqjCnPS.png"
+            },
+            "socialImage": {
+                "url": "https://media.mut.gg/24/mutdb/playeritem/social_10102772.webp"
+            },
+            "cardImage": {
+                "url": "https://media.mut.gg/24/mutdb/playeritem/card_10102772.webp"
+            },
+            "firstName": "Jason",
+            "lastName": "Myers",
+            "team": {
+                "id": 29,
+                "name": "Seahawks",
+                "location": "Seattle",
+                "abbreviation": "SEA",
+                "primaryHexColor": "#002244",
+                "secondaryHexColor": "#69BE28",
+                "urlSlug": "seattle-seahawks"
+            },
+            "program": {
+                "id": 233,
+                "name": "Core Set",
+                "image": {
+                    "url": "https://media.mut.gg/24/mutdb/program/101_Ix7AJmE.png"
+                },
+                "hexColor": "#000000"
+            },
+            "canAuction": true,
+            "canTrade": true,
+            "isMaxedOvr": false,
+            "hasPowerUp": false,
+            "isLtd": false,
+            "tier": 4,
+            "position": {
+                "id": 20,
+                "name": "Kicker",
+                "abbreviation": "K",
+                "basePosition": {
+                    "id": 15,
+                    "name": "Kicker",
+                    "abbreviation": "K"
+                }
+            },
+            "url": "/players/2772-jason-myers/24-10102772/",
+            "archetype": {
+                "name": "Power - KP",
+                "nameWithoutPosition": "Power"
+            },
+            "pcPrice": 29160,
+            "pcPriceDisplay": "29.2K",
+            "pcPercentChange": "-16.0000",
+            "pcPercentChangeDisplay": "-16.0",
+            "xb1Price": 35470,
+            "xb1PriceDisplay": "35.5K",
+            "xb1PercentChange": "11.6000",
+            "xb1PercentChangeDisplay": "11.6",
+            "xbsxPrice": 30220,
+            "xbsxPriceDisplay": "30.2K",
+            "xbsxPercentChange": "2.5400",
+            "xbsxPercentChangeDisplay": "2.54",
+            "ps4Price": 35720,
+            "ps4PriceDisplay": "35.7K",
+            "ps4PercentChange": "0.0000",
+            "ps4PercentChangeDisplay": "0.00",
+            "ps5Price": 41720,
+            "ps5PriceDisplay": "41.7K",
+            "ps5PercentChange": "49.2000",
+            "ps5PercentChangeDisplay": "49.2",
+            "displayChemAbbreviation": "sea",
+            "displayChemImageUrl": "https://media.mut.gg/24/mutdb/chemistry/6280_bNBGh30.xsl",
+            "displayChemName": "Seattle Seahawks",
+            "releaseDate": "2023-08-14T23:58:11.609535Z"
+        }
+    ],
+    "P": [
+        {
+            "pk": 18708,
+            "externalId": 10113391,
+            "gameSlug": "24",
+            "overall": 81,
+            "maxOverall": 81,
+            "image": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=100,height=100,quality=80,fit=cover,gravity=top/24/mutdb/playeritem/10113391_Dt1YdXn.png"
+            },
+            "fullImage": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=208,height=356,quality=80,fit=cover,gravity=top/24/mutdb/playeritem/10113391_Dt1YdXn.png"
+            },
+            "borderImage": {
+                "url": "https://media.mut.gg/cdn-cgi/image/format=auto,width=300,height=401,quality=80,fit=cover,gravity=top/24/mutdb/border/315_PqjCnPS.png"
+            },
+            "socialImage": {
+                "url": "https://media.mut.gg/24/mutdb/playeritem/social_10113391.webp"
+            },
+            "cardImage": {
+                "url": "https://media.mut.gg/24/mutdb/playeritem/card_10113391.webp"
+            },
+            "firstName": "Michael",
+            "lastName": "Dickson",
+            "team": {
+                "id": 29,
+                "name": "Seahawks",
+                "location": "Seattle",
+                "abbreviation": "SEA",
+                "primaryHexColor": "#002244",
+                "secondaryHexColor": "#69BE28",
+                "urlSlug": "seattle-seahawks"
+            },
+            "program": {
+                "id": 233,
+                "name": "Core Set",
+                "image": {
+                    "url": "https://media.mut.gg/24/mutdb/program/101_Ix7AJmE.png"
+                },
+                "hexColor": "#000000"
+            },
+            "canAuction": true,
+            "canTrade": true,
+            "isMaxedOvr": false,
+            "hasPowerUp": false,
+            "isLtd": false,
+            "tier": 4,
+            "position": {
+                "id": 21,
+                "name": "Punter",
+                "abbreviation": "P",
+                "basePosition": {
+                    "id": 16,
+                    "name": "Punter",
+                    "abbreviation": "P"
+                }
+            },
+            "url": "/players/13391-michael-dickson/24-10113391/",
+            "archetype": {
+                "name": "Power - KP",
+                "nameWithoutPosition": "Power"
+            },
+            "pcPrice": 17470,
+            "pcPriceDisplay": "17.5K",
+            "pcPercentChange": "-11.5000",
+            "pcPercentChangeDisplay": "-11.5",
+            "xb1Price": 19220,
+            "xb1PriceDisplay": "19.2K",
+            "xb1PercentChange": "-2.5400",
+            "xb1PercentChangeDisplay": "-2.54",
+            "xbsxPrice": 14970,
+            "xbsxPriceDisplay": "15K",
+            "xbsxPercentChange": "1.4900",
+            "xbsxPercentChangeDisplay": "1.49",
+            "ps4Price": 18390,
+            "ps4PriceDisplay": "18.4K",
+            "ps4PercentChange": "-1.1300",
+            "ps4PercentChangeDisplay": "-1.13",
+            "ps5Price": 14970,
+            "ps5PriceDisplay": "15K",
+            "ps5PercentChange": "5.2700",
+            "ps5PercentChangeDisplay": "5.27",
+            "displayChemAbbreviation": "sea",
+            "displayChemImageUrl": "https://media.mut.gg/24/mutdb/chemistry/6280_bNBGh30.xsl",
+            "displayChemName": "Seattle Seahawks",
+            "releaseDate": "2023-08-14T23:58:11.584034Z"
+        }
+    ]
 }
