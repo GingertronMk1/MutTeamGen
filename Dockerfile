@@ -10,3 +10,5 @@ RUN apt update && \
     apt install -y \
         bsdmainutils \
         jq
+
+RUN mypy --install-types --non-interactive
