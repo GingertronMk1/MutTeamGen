@@ -1,41 +1,78 @@
 import copy
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 import json
 import requests
-from sys import exit
 from bs4 import BeautifulSoup
 
 FROM_INTERNET = True
 
-position_numbers = {
-    "QB": 2,
-    "HB": 3,
-    "FB": 1,
-    "WR": 5,
-    "TE": 3,
-    "LT": 2,
-    "LG": 2,
-    "C": 2,
-    "RG": 2,
-    "RT": 2,
-    "LE": 2,
-    "RE": 2,
-    "DT": 4,
-    "LOLB": 2,
-    "MLB": 4,
-    "ROLB": 2,
-    "CB": 5,
-    "FS": 2,
-    "SS": 2,
-    "K": 1,
-    "P": 1,
-}
+
+@dataclass
+class Lineup:
+    qb: list = field(default_factory=list)
+    hb: list = field(default_factory=list)
+    fb: list = field(default_factory=list)
+    wr: list = field(default_factory=list)
+    te: list = field(default_factory=list)
+    lt: list = field(default_factory=list)
+    lg: list = field(default_factory=list)
+    c: list = field(default_factory=list)
+    rg: list = field(default_factory=list)
+    rt: list = field(default_factory=list)
+    le: list = field(default_factory=list)
+    re: list = field(default_factory=list)
+    dt: list = field(default_factory=list)
+    lolb: list = field(default_factory=list)
+    mlb: list = field(default_factory=list)
+    rolb: list = field(default_factory=list)
+    cb: list = field(default_factory=list)
+    fs: list = field(default_factory=list)
+    ss: list = field(default_factory=list)
+    k: list = field(default_factory=list)
+    p: list = field(default_factory=list)
+
+    @staticmethod
+    def get_position_numbers() -> dict[str, int]:
+      return {
+          "qb": 2,
+          "hb": 3,
+          "fb": 1,
+          "wr": 5,
+          "te": 3,
+          "lt": 2,
+          "lg": 2,
+          "c": 2,
+          "rg": 2,
+          "rt": 2,
+          "le": 2,
+          "re": 2,
+          "dt": 4,
+          "lolb": 2,
+          "mlb": 4,
+          "rolb": 2,
+          "cb": 5,
+          "fs": 2,
+          "ss": 2,
+          "k": 1,
+          "p": 1,
+      }
+
+    def is_full(self) -> bool:
+        for (position, number) in self.get_position_numbers().items():
+            if len(getattr(self, position)) < number:
+                return False
+        return True
+
+    def to_dict(self) -> dict[str, list[dict]]:
+        ret_val = {}
+        for position in self.get_position_numbers().keys():
+            ret_val[position] = getattr(self, position)
+        return ret_val
 
 
 def gen_lineup():
-    global position_numbers
     lineup = {}
-    for key in position_numbers.keys():
+    for key in Lineup.get_position_numbers().keys():
         lineup[key] = list()
     return lineup
 
@@ -58,7 +95,7 @@ def get_api_player_from_web_link(link):
 
 
 def get_lineup_for_team(team):
-    lineup = gen_lineup()
+    lineup = Lineup()
     base_url = "https://www.mut.gg/players"
     for page in range(1, 300):
         retrieved_page = requests.get(
@@ -75,27 +112,28 @@ def get_lineup_for_team(team):
             href = link.get("href")
             retrieved_player = get_api_player_from_web_link(href)
             if retrieved_player is not None:
-                position = retrieved_player.get("position").get("abbreviation")
+                position = retrieved_player.get("position").get("abbreviation").lower()
                 firstName = retrieved_player.get("firstName")
                 lastName = retrieved_player.get("lastName")
+                position_players = getattr(lineup, position)
                 add_condition = all(
                     [
-                        len(lineup[position]) < position_numbers[position],
+                        len(position_players) < Lineup.get_position_numbers()[position],
                         not any(
                             curr.get("firstName") == firstName
                             and curr.get("lastName") == lastName
-                            for curr in lineup[position]
+                            for curr in position_players
                         ),
                     ]
                 )
                 if add_condition:
-                    lineup[position].append(copy.deepcopy(retrieved_player))
+                    position_players.append(copy.deepcopy(retrieved_player))
+                    setattr(lineup, position, position_players)
                     print(f"Added {firstName} {lastName}")
-                fulls = list()
-                for position, number in position_numbers.items():
-                    print(f"{position}: {len(lineup[position])}/{number}")
-                    fulls.append(len(lineup[position]) >= number)
-                if all(fulls):
+                for position, number in Lineup.get_position_numbers().items():
+                    position_players = getattr(lineup, position)
+                    print(f"{position}: {len(position_players)}/{number}")
+                if lineup.is_full():
                     print("All Full Up")
                     return lineup
     print("Exhausted")
@@ -103,36 +141,33 @@ def get_lineup_for_team(team):
 
 
 def get_lineup():
-    original_lineup = gen_lineup()
+    original_lineup = Lineup()
     acceptable_teams = ["sea", "phi"]
     for team in acceptable_teams:
         original_lineup = merge_lineups(original_lineup, get_lineup_for_team(team))
     return original_lineup
 
 
-def merge_lineups(lineup_1, lineup_2):
-    global position_numbers
-    new_lineup = gen_lineup()
-    for position, players in lineup_1.items():
-        lineup_2_players_in_position = lineup_2.get(position, [])
-        number_of_players_at_position = position_numbers.get(position, 0)
-        print(number_of_players_at_position)
+def merge_lineups(lineup_1: Lineup, lineup_2: Lineup):
+    new_lineup = Lineup()
+    for (position, number) in Lineup.get_position_numbers().items():
+        lineup_1_players = getattr(lineup_1, position)
+        lineup_2_players = getattr(lineup_2, position)
         new_players = sorted(
-            players + lineup_2_players_in_position,
+            lineup_1_players + lineup_2_players,
             key=lambda player: player.get("overall", 0),
-            reverse=True,
-        )[0:number_of_players_at_position]
-        for player in new_players:
-            new_lineup[position].append(player)
+            reverse= True
+        )[0:number]
+        setattr(new_lineup, position, new_players)
     return new_lineup
 
 
 lineup = get_lineup()
 
 with open("lineup.json", "w") as lineup_file:
-    json.dump(lineup, lineup_file, indent=4)
+    json.dump(lineup.to_dict(), lineup_file, indent=4)
 
-for pos, players in lineup.items():
+for (pos, players) in lineup.to_dict().items():
     pos_players = ", ".join(
         f"{player.get('overall')} {player.get('firstName')} {player.get('lastName')}"
         for player in players
