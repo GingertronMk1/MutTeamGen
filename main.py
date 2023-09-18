@@ -151,10 +151,12 @@ def get_lineup():
 def merge_lineups(lineup_1: Lineup, lineup_2: Lineup):
     new_lineup = Lineup()
     for (position, number) in Lineup.get_position_numbers().items():
-        lineup_1_players = getattr(lineup_1, position)
-        lineup_2_players = getattr(lineup_2, position)
+        joined_lineup = getattr(lineup_1, position)
+        for player in getattr(lineup_2, position):
+            if player.get("id") not in list(lineup_1_player.get("id") for lineup_1_player in joined_lineup):
+                joined_lineup.append(player)
         new_players = sorted(
-            lineup_1_players + lineup_2_players,
+            joined_lineup,
             key=lambda player: player.get("overall", 0),
             reverse= True
         )[0:number]
