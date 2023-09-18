@@ -1,3 +1,3 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
-exec python -m main
+./bin/exec python -m main "$@"
