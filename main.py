@@ -63,10 +63,10 @@ class Lineup:
                 return False
         return True
 
-    def to_dict(self) -> dict[str, list[dict]]:
+    def to_dict(self) -> dict[str, list[str]]:
         ret_val = {}
         for position in self.get_position_numbers().keys():
-            ret_val[position] = getattr(self, position)
+            ret_val[position] = [f"{player.get('overall')}OVR {player.get('firstName')} {player.get('lastName')}" for player in getattr(self, position)]
         return ret_val
 
 
@@ -168,8 +168,5 @@ with open("lineup.json", "w") as lineup_file:
     json.dump(lineup.to_dict(), lineup_file, indent=4)
 
 for (pos, players) in lineup.to_dict().items():
-    pos_players = ", ".join(
-        f"{player.get('overall')} {player.get('firstName')} {player.get('lastName')}"
-        for player in players
-    )
+    pos_players = ", ".join(players)
     print(f"{pos}: {pos_players}")
