@@ -153,7 +153,7 @@ def merge_lineups(lineup_1: Lineup, lineup_2: Lineup):
     for (position, number) in Lineup.get_position_numbers().items():
         joined_lineup = getattr(lineup_1, position)
         for player in getattr(lineup_2, position):
-            if player.get("id") not in list(lineup_1_player.get("id") for lineup_1_player in joined_lineup):
+            if player.get("externalId") not in list(lineup_1_player.get("id") for lineup_1_player in joined_lineup):
                 joined_lineup.append(player)
         new_players = sorted(
             joined_lineup,
