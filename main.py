@@ -124,6 +124,7 @@ def get_lineup_for_team(team):
                             and curr.get("lastName") == lastName
                             for curr in position_players
                         ),
+                        get_player_id(retrieved_player) not in list(get_player_id(position_player) for position_player in position_players)
                     ]
                 )
                 if add_condition:
@@ -147,13 +148,16 @@ def get_lineup():
         original_lineup = merge_lineups(original_lineup, get_lineup_for_team(team))
     return original_lineup
 
+def get_player_id(player: dict[str, str]) -> str:
+    return str(player.get("externalId", 0))[-5:]
+
 
 def merge_lineups(lineup_1: Lineup, lineup_2: Lineup):
     new_lineup = Lineup()
     for (position, number) in Lineup.get_position_numbers().items():
         joined_lineup = getattr(lineup_1, position)
         for player in getattr(lineup_2, position):
-            if player.get("externalId") not in list(lineup_1_player.get("id") for lineup_1_player in joined_lineup):
+            if get_player_id(player) not in list(get_player_id(lineup_1_player) for lineup_1_player in joined_lineup):
                 joined_lineup.append(player)
         new_players = sorted(
             joined_lineup,
@@ -172,3 +176,16 @@ with open("lineup.json", "w") as lineup_file:
 for (pos, players) in lineup.to_dict().items():
     pos_players = ", ".join(players)
     print(f"{pos}: {pos_players}")
+
+"""
+https://www.mut.gg/players/11567-bobby-wagner/24-15511567/
+https://www.mut.gg/players/11567-bobby-wagner/24-10111567/
+https://www.mut.gg/players/11567-bobby-wagner/24-15611567/
+https://www.mut.gg/players/11567-bobby-wagner/24-15711567/
+
+
+https://www.mut.gg/players/11306-lavonte-david/24-10111306/
+https://www.mut.gg/players/11306-lavonte-david/24-10011306/
+
+
+"""
