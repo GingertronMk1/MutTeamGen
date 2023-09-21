@@ -122,7 +122,7 @@ class Lineup:
 
     def to_csv(self, out_file_name = 'lineup.csv') -> None:
         with open(out_file_name, 'w') as out_file:
-            to_write = []
+            to_write: list[list] = []
             to_write.append(['Position', 'Name', 'OVR', 'Chem', 'Program'])
             for (position, players) in self.players_as_dict().items():
                 for player in players:
