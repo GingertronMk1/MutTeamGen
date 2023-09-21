@@ -122,18 +122,27 @@ class Lineup:
 
     def to_csv(self, out_file_name = 'lineup.csv') -> None:
         with open(out_file_name, 'w') as out_file:
-            writer = csv.writer(out_file)
-            writer.writerow(['Position', 'Name', 'OVR', 'Chem', 'Program'])
+            to_write = []
+            to_write.append(['Position', 'Name', 'OVR', 'Chem', 'Program'])
             for (position, players) in self.players_as_dict().items():
                 for player in players:
-                    writer.writerow([position.upper(), player.name, player.ovr, player.chem.upper(), player.program])
-                writer.writerow([None])
+                    to_write.append([position.upper(), player.name, player.ovr, player.chem.upper(), player.program])
+                to_write.append([None])
             chems = []
             numbers = []
             for (chem, number) in self.get_chem_numbers().items():
                 chems.append(chem.upper())
                 numbers.append(number)
-            writer.writerows([chems, numbers, []])
+            to_write.extend([chems, numbers, []])
+            writer = csv.writer(out_file)
+            writer.writerows(square_off_list_of_lists(to_write))
+
+def square_off_list_of_lists(input: list[list]) -> list[list]:
+    target_length = max(len(l) for l in input)
+    return list(pad_list(l, target_length) for l in input)
+
+def pad_list(input_list: list, target_length: int) -> list:
+    return input_list + [None] * (target_length - len(input_list))
 
 def gen_lineup():
     lineup = {}
