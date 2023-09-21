@@ -1,35 +1,65 @@
 import copy
 from dataclasses import dataclass, field
+from functools import reduce
 import json
 import requests
 from bs4 import BeautifulSoup
 
 FROM_INTERNET = True
 
+@dataclass
+class Player:
+    id: str
+    name: str
+    ovr: int
+    pos: str
+    chem: str
+
+    @staticmethod
+    def from_dict(input: dict, chem: str = None) -> "Player":
+        fullName = f"{input.get('firstName')} {input.get('lastName')}"
+        if chem is None:
+            team = input.get('team')
+            if team is None:
+                raise ValueError("No Team")
+            chem = team.get('abbreviation').lower()
+        return Player(
+            str(input.get('externalId')),
+            fullName,
+            input.get('overall'),
+            input.get('position').get('abbreviation').lower(),
+            chem
+        )
+    
+    def __str__(self) -> str:
+        return f"{self.ovr}OVR {self.name} ({self.chem})"
+
+    def get_player_id(self) -> str:
+        return self.id[-5:]
 
 @dataclass
 class Lineup:
-    qb: list = field(default_factory=list)
-    hb: list = field(default_factory=list)
-    fb: list = field(default_factory=list)
-    wr: list = field(default_factory=list)
-    te: list = field(default_factory=list)
-    lt: list = field(default_factory=list)
-    lg: list = field(default_factory=list)
-    c: list = field(default_factory=list)
-    rg: list = field(default_factory=list)
-    rt: list = field(default_factory=list)
-    le: list = field(default_factory=list)
-    re: list = field(default_factory=list)
-    dt: list = field(default_factory=list)
-    lolb: list = field(default_factory=list)
-    mlb: list = field(default_factory=list)
-    rolb: list = field(default_factory=list)
-    cb: list = field(default_factory=list)
-    fs: list = field(default_factory=list)
-    ss: list = field(default_factory=list)
-    k: list = field(default_factory=list)
-    p: list = field(default_factory=list)
+    qb: list[Player] = field(default_factory=list)
+    hb: list[Player] = field(default_factory=list)
+    fb: list[Player] = field(default_factory=list)
+    wr: list[Player] = field(default_factory=list)
+    te: list[Player] = field(default_factory=list)
+    lt: list[Player] = field(default_factory=list)
+    lg: list[Player] = field(default_factory=list)
+    c: list[Player] = field(default_factory=list)
+    rg: list[Player] = field(default_factory=list)
+    rt: list[Player] = field(default_factory=list)
+    le: list[Player] = field(default_factory=list)
+    re: list[Player] = field(default_factory=list)
+    dt: list[Player] = field(default_factory=list)
+    lolb: list[Player] = field(default_factory=list)
+    mlb: list[Player] = field(default_factory=list)
+    rolb: list[Player] = field(default_factory=list)
+    cb: list[Player] = field(default_factory=list)
+    fs: list[Player] = field(default_factory=list)
+    ss: list[Player] = field(default_factory=list)
+    k: list[Player] = field(default_factory=list)
+    p: list[Player] = field(default_factory=list)
 
     @staticmethod
     def get_position_numbers() -> dict[str, int]:
@@ -63,11 +93,23 @@ class Lineup:
                 return False
         return True
 
-    def to_dict(self) -> dict[str, list[str]]:
+    def get_chem_numbers(self) -> dict[str, int]:
         ret_val = {}
         for position in self.get_position_numbers().keys():
-            ret_val[position] = [f"{player.get('overall')}OVR {player.get('firstName')} {player.get('lastName')}" for player in getattr(self, position)]
+            for player in getattr(self, position):
+                ret_val[player.chem] = ret_val.get(player.chem, 0) + 1
         return ret_val
+
+
+    def to_dict(self) -> dict[str, list[str]]:
+        players = {}
+        for position in self.get_position_numbers().keys():
+            players_in_position = getattr(self, position)
+            players[position] = [str(player) for player in players_in_position]
+        return {
+            'totals': self.get_chem_numbers(),
+            'players': players
+        }
 
 
 def gen_lineup():
@@ -111,26 +153,20 @@ def get_lineup_for_team(team):
             print(f"{page} | {lkey}")
             href = link.get("href")
             retrieved_player = get_api_player_from_web_link(href)
+            retrieved_player = Player.from_dict(retrieved_player, team)
             if retrieved_player is not None:
-                position = retrieved_player.get("position").get("abbreviation").lower()
-                firstName = retrieved_player.get("firstName")
-                lastName = retrieved_player.get("lastName")
+                position = retrieved_player.pos
                 position_players = getattr(lineup, position)
                 add_condition = all(
                     [
                         len(position_players) < Lineup.get_position_numbers()[position],
-                        not any(
-                            curr.get("firstName") == firstName
-                            and curr.get("lastName") == lastName
-                            for curr in position_players
-                        ),
-                        get_player_id(retrieved_player) not in list(get_player_id(position_player) for position_player in position_players)
+                        retrieved_player.get_player_id() not in list(pos_player.get_player_id() for pos_player in position_players)
                     ]
                 )
                 if add_condition:
                     position_players.append(copy.deepcopy(retrieved_player))
                     setattr(lineup, position, position_players)
-                    print(f"Added {firstName} {lastName}")
+                    print(f"Added {retrieved_player.name}")
                 for position, number in Lineup.get_position_numbers().items():
                     position_players = getattr(lineup, position)
                     print(f"{position}: {len(position_players)}/{number}")
@@ -157,11 +193,11 @@ def merge_lineups(lineup_1: Lineup, lineup_2: Lineup):
     for (position, number) in Lineup.get_position_numbers().items():
         joined_lineup = getattr(lineup_1, position)
         for player in getattr(lineup_2, position):
-            if get_player_id(player) not in list(get_player_id(lineup_1_player) for lineup_1_player in joined_lineup):
+            if player.get_player_id() not in list(lineup_1_player.get_player_id() for lineup_1_player in joined_lineup):
                 joined_lineup.append(player)
         new_players = sorted(
             joined_lineup,
-            key=lambda player: player.get("overall", 0),
+            key=lambda player: player.ovr,
             reverse= True
         )[0:number]
         setattr(new_lineup, position, new_players)
@@ -171,21 +207,6 @@ def merge_lineups(lineup_1: Lineup, lineup_2: Lineup):
 lineup = get_lineup()
 
 with open("lineup.json", "w") as lineup_file:
-    json.dump(lineup.to_dict(), lineup_file, indent=4)
-
-for (pos, players) in lineup.to_dict().items():
-    pos_players = ", ".join(players)
-    print(f"{pos}: {pos_players}")
-
-"""
-https://www.mut.gg/players/11567-bobby-wagner/24-15511567/
-https://www.mut.gg/players/11567-bobby-wagner/24-10111567/
-https://www.mut.gg/players/11567-bobby-wagner/24-15611567/
-https://www.mut.gg/players/11567-bobby-wagner/24-15711567/
-
-
-https://www.mut.gg/players/11306-lavonte-david/24-10111306/
-https://www.mut.gg/players/11306-lavonte-david/24-10011306/
-
-
-"""
+    lineup_dict = lineup.to_dict()
+    json.dump(lineup_dict, lineup_file, indent=4)
+    print(json.dumps(lineup_dict, indent=4))
