@@ -15,7 +15,7 @@ on:
 env:
   GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   OUTPUT_BRANCH: output/built
-  OUTPUT_DIR: outputs
+  OUTPUT_DIR: output
 
 # Allow one concurrent deployment
 concurrency:
