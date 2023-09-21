@@ -1,6 +1,6 @@
 import copy
+import csv
 from dataclasses import dataclass, field
-from functools import reduce
 import json
 import requests
 from bs4 import BeautifulSoup
@@ -13,10 +13,11 @@ class Player:
     name: str
     ovr: int
     pos: str
+    program: str
     chem: str
 
     @staticmethod
-    def from_dict(input: dict, chem: str = None) -> "Player":
+    def from_dict(input: dict, chem: str|None = None) -> "Player":
         fullName = f"{input.get('firstName')} {input.get('lastName')}"
         if chem is None:
             team = input.get('team')
@@ -24,18 +25,20 @@ class Player:
                 raise ValueError("No Team")
             chem = team.get('abbreviation').lower()
         return Player(
-            str(input.get('externalId')),
+            str(input.get('externalId', 0)),
             fullName,
-            input.get('overall'),
+            str(input.get('overall', 0)),
             input.get('position').get('abbreviation').lower(),
+            input.get('program').get('name'),
             chem
         )
     
     def __str__(self) -> str:
-        return f"{self.ovr}OVR {self.name} ({self.chem})"
+        return f"{self.ovr}OVR {self.program} {self.name} ({self.chem.upper()})"
 
     def get_player_id(self) -> str:
         return self.id[-5:]
+
 
 @dataclass
 class Lineup:
@@ -101,16 +104,36 @@ class Lineup:
         return ret_val
 
 
-    def to_dict(self) -> dict[str, list[str]]:
+    def to_dict(self) -> dict:
         players = {}
-        for position in self.get_position_numbers().keys():
-            players_in_position = getattr(self, position)
-            players[position] = [str(player) for player in players_in_position]
+        for (position, pos_players) in self.players_as_dict().items():
+            players[position] = [str(player) for player in pos_players]
         return {
             'totals': self.get_chem_numbers(),
             'players': players
         }
 
+    def players_as_dict(self) -> dict[str, list['Player']]:
+        players = {}
+        for position in self.get_position_numbers().keys():
+            players_in_position = getattr(self, position)
+            players[position] = players_in_position
+        return players
+
+    def to_csv(self, out_file_name = 'lineup.csv') -> None:
+        with open(out_file_name, 'w') as out_file:
+            writer = csv.writer(out_file)
+            writer.writerow(['Position', 'Name', 'OVR', 'Chem', 'Program'])
+            for (position, players) in self.players_as_dict().items():
+                for player in players:
+                    writer.writerow([position.upper(), player.name, player.ovr, player.chem.upper(), player.program])
+                writer.writerow([None])
+            chems = []
+            numbers = []
+            for (chem, number) in self.get_chem_numbers().items():
+                chems.append(chem.upper())
+                numbers.append(number)
+            writer.writerows([chems, numbers, []])
 
 def gen_lineup():
     lineup = {}
@@ -203,10 +226,14 @@ def merge_lineups(lineup_1: Lineup, lineup_2: Lineup):
         setattr(new_lineup, position, new_players)
     return new_lineup
 
+def output_dir(subdir: str) -> str:
+    return f"./output/{subdir}"
 
 lineup = get_lineup()
 
-with open("lineup.json", "w") as lineup_file:
+with open(output_dir('lineup.json'), "w") as lineup_file:
     lineup_dict = lineup.to_dict()
     json.dump(lineup_dict, lineup_file, indent=4)
     print(json.dumps(lineup_dict, indent=4))
+
+lineup.to_csv(output_dir('lineup.csv'))
