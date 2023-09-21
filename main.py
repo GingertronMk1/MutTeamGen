@@ -27,9 +27,9 @@ class Player:
         return Player(
             str(input.get('externalId', 0)),
             fullName,
-            str(input.get('overall', 0)),
-            input.get('position').get('abbreviation').lower(),
-            input.get('program').get('name'),
+            input.get('overall', 0),
+            input.get('position', {}).get('abbreviation', '').lower(),
+            input.get('program', {}).get('name', ''),
             chem
         )
     
@@ -97,7 +97,7 @@ class Lineup:
         return True
 
     def get_chem_numbers(self) -> dict[str, int]:
-        ret_val = {}
+        ret_val: dict[str, int] = {}
         for position in self.get_position_numbers().keys():
             for player in getattr(self, position):
                 ret_val[player.chem] = ret_val.get(player.chem, 0) + 1
