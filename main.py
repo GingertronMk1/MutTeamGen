@@ -4,6 +4,7 @@ from dataclasses import dataclass, field
 import json
 import requests
 from bs4 import BeautifulSoup
+import multiprocessing
 
 FROM_INTERNET = True
 
@@ -236,8 +237,9 @@ def get_lineup_for_team(team):
 def get_lineup():
     original_lineup = Lineup()
     acceptable_teams = ["sea", "phi"]
-    for team in acceptable_teams:
-        original_lineup = merge_lineups(original_lineup, get_lineup_for_team(team))
+    with multiprocessing.Pool() as pool:
+        for result in pool.map(get_lineup_for_team, acceptable_teams):
+            original_lineup = merge_lineups(original_lineup, result)
     return original_lineup
 
 
