@@ -135,7 +135,7 @@ class Lineup:
             players[position] = players_in_position
         return players
 
-    def to_csv(self, out_file_name: str ="lineup.csv") -> None:
+    def to_csv(self, out_file_name: str = "lineup.csv") -> None:
         with open(out_file_name, "w") as out_file:
             to_write: list[list] = []
             to_write.append(["Position", "Name", "OVR", "Chem", "Program"])
@@ -161,6 +161,23 @@ class Lineup:
             writer = csv.writer(out_file)
             writer.writerows(square_off_list_of_lists(to_write))
 
+    def make_best(self) -> None:
+        for abbrev, position in self.get_positions().items():
+            position_players: list[Player] = sorted(
+                getattr(self, abbrev), key=lambda p: p.ovr, reverse=True
+            )
+            new_players: list[Player] = list()
+            for player in position_players:
+                if player.get_player_id() not in list(
+                    new_player.get_player_id() for new_player in new_players
+                ):
+                    new_players.append(player)
+            setattr(self, abbrev, new_players[0 : position.max_in_lineup])
+
+
+def output_dir(subdir: str) -> str:
+    return f"./output/{subdir}"
+
 
 def square_off_list_of_lists(input: list[list]) -> list[list]:
     target_length = max(len(l) for l in input)
@@ -170,70 +187,60 @@ def square_off_list_of_lists(input: list[list]) -> list[list]:
 def pad_list(input_list: list, target_length: int) -> list:
     return input_list + [None] * (target_length - len(input_list))
 
-def get_api_player(id: str) -> dict | None:
+
+def get_api_player(id: str, team: str) -> Player | None:
     try:
         ret_val: dict = (
             requests.get(f"https://www.mut.gg/api/mutdb/player-items/{id}")
             .json()
             .get("data")
         )
-        return ret_val
+        if ret_val.get("program", {}).get("id", 0) != 240:
+            return Player.from_dict(ret_val, team)
     except:
-        return None
+        pass
+    return None
 
-def get_api_player_from_web_link(link: str) -> dict | None:
+
+def get_api_player_from_web_link(link: str, team: str) -> Player | None:
     split_link = list(s for s in link.split("/") if s)
     player_id = split_link[-1]
-    return get_api_player(player_id)
+    return get_api_player(player_id, team)
 
-def get_lineup_for_team(team: str) -> Lineup:
-    lineup = Lineup()
+
+def get_api_players_from_web_page(page_number: int, team: str) -> list[Player]:
     base_url = "https://www.mut.gg/players"
-    upper_team = team.upper()
-    for page in range(1, 300):
-        params: dict[str, int|str] = {"page": page, "team_chem": team}
-        retrieved_page = requests.get(
-            base_url, params=params
-        )
-        if retrieved_page.status_code != 200:
-            return lineup
-        retrieved_text: str = retrieved_page.text
-        retrieved_page_soup = BeautifulSoup(retrieved_text, "html.parser")
-        for lkey, link in enumerate(
-            retrieved_page_soup.find_all("a", class_="player-list-item__link")
-        ):
-            print(f"{upper_team} {page} | {lkey}")
-            href = link.get("href")
-            api_player = get_api_player_from_web_link(href)
-            if api_player is None:
-                continue
-            if api_player.get("program", {}).get("id", 0) != 240:
-                retrieved_player = Player.from_dict(api_player, team)
-                if retrieved_player is not None:
-                    position = retrieved_player.pos
-                    position_players = getattr(lineup, position)
-                    add_condition = retrieved_player.get_player_id() not in list(
-                        pos_player.get_player_id() for pos_player in position_players
-                    )
-                    if add_condition:
-                        position_players.append(copy.deepcopy(retrieved_player))
-                        setattr(lineup, position, position_players)
-                        print(f"{upper_team} Added {retrieved_player.name}")
-                    for position, number in Lineup.get_positions().items():
-                        position_players = getattr(lineup, position)
-                        # print(f"{position}: {len(position_players)}/{number.max_in_lineup}")
-                    if lineup.is_full():
-                        print("All Full Up")
-                        return lineup
-    print("Exhausted")
-    return lineup
+    params: dict[str, int | str] = {"page": page_number, "team_chem": team}
+    retrieved_page = requests.get(base_url, params=params)
+    if retrieved_page.status_code != 200:
+        return []
+    retrieved_text: str = retrieved_page.text
+    retrieved_page_soup = BeautifulSoup(retrieved_text, "html.parser")
+    ret_val = list()
+    for lkey, link in enumerate(
+        retrieved_page_soup.find_all("a", class_="player-list-item__link")
+    ):
+        print(f"{team.upper()} {page_number} | {lkey}")
+        href = link.get("href")
+        retrieved_player = get_api_player_from_web_link(href, team)
+        if retrieved_player is not None:
+            ret_val.append(retrieved_player)
+    return ret_val
+
 
 def get_lineup() -> Lineup:
     original_lineup = Lineup()
     acceptable_teams = ["sea", "phi"]
+    combinations: list[tuple[int, str]] = list(
+        (page, team_chem) for page in range(1, 100) for team_chem in acceptable_teams
+    )
     with multiprocessing.Pool() as pool:
-        for result in pool.map(get_lineup_for_team, acceptable_teams):
-            original_lineup = merge_lineups(original_lineup, result)
+        for players in pool.starmap(get_api_players_from_web_page, combinations):
+            for player in players:
+                position = player.pos
+                current_pos_players = getattr(original_lineup, position)
+                current_pos_players.append(player)
+                setattr(original_lineup, position, current_pos_players)
     return original_lineup
 
 
@@ -241,27 +248,9 @@ def get_player_id(player: dict[str, str]) -> str:
     return str(player.get("externalId", 0))[-5:]
 
 
-def merge_lineups(lineup_1: Lineup, lineup_2: Lineup) -> Lineup:
-    new_lineup = Lineup()
-    for position, number in Lineup.get_positions().items():
-        joined_lineup = getattr(lineup_1, position)
-        for player in getattr(lineup_2, position):
-            if player.get_player_id() not in list(
-                lineup_1_player.get_player_id() for lineup_1_player in joined_lineup
-            ):
-                joined_lineup.append(player)
-        new_players = sorted(
-            joined_lineup, key=lambda player: player.ovr, reverse=True
-        )[0 : number.max_in_lineup]
-        setattr(new_lineup, position, new_players)
-    return new_lineup
-
-
-def output_dir(subdir: str) -> str:
-    return f"./output/{subdir}"
-
-
 lineup = get_lineup()
+
+lineup.make_best()
 
 with open(output_dir("lineup.json"), "w") as lineup_file:
     lineup_dict = lineup.to_dict()
