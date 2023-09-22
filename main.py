@@ -33,7 +33,7 @@ class Player:
         return Player(
             str(input.get('externalId', 0)),
             fullName,
-            input.get('overall', 0),
+            input.get('maxOverall', 0),
             input.get('position', {}).get('abbreviation', '').lower(),
             input.get('program', {}).get('name', ''),
             chem
@@ -200,27 +200,23 @@ def get_lineup_for_team(team):
         ):
             print(f"{page} | {lkey}")
             href = link.get("href")
-            retrieved_player = get_api_player_from_web_link(href)
-            retrieved_player = Player.from_dict(retrieved_player, team)
-            if retrieved_player is not None:
-                position = retrieved_player.pos
-                position_players = getattr(lineup, position)
-                add_condition = all(
-                    [
-                        len(position_players) < Lineup.get_positions()[position].max_in_lineup,
-                        retrieved_player.get_player_id() not in list(pos_player.get_player_id() for pos_player in position_players)
-                    ]
-                )
-                if add_condition:
-                    position_players.append(copy.deepcopy(retrieved_player))
-                    setattr(lineup, position, position_players)
-                    print(f"Added {retrieved_player.name}")
-                for position, number in Lineup.get_positions().items():
-                    position_players = getattr(lineup, position)
-                    # print(f"{position}: {len(position_players)}/{number.max_in_lineup}")
-                if lineup.is_full():
-                    print("All Full Up")
-                    return lineup
+            api_player = get_api_player_from_web_link(href)
+            if api_player.get('program', {}).get('id', 0) != 240:
+              retrieved_player = Player.from_dict(api_player, team)
+              if retrieved_player is not None:
+                  position = retrieved_player.pos
+                  position_players = getattr(lineup, position)
+                  add_condition = retrieved_player.get_player_id() not in list(pos_player.get_player_id() for pos_player in position_players)
+                  if add_condition:
+                      position_players.append(copy.deepcopy(retrieved_player))
+                      setattr(lineup, position, position_players)
+                      print(f"Added {retrieved_player.name}")
+                  for position, number in Lineup.get_positions().items():
+                      position_players = getattr(lineup, position)
+                      # print(f"{position}: {len(position_players)}/{number.max_in_lineup}")
+                  if lineup.is_full():
+                      print("All Full Up")
+                      return lineup
     print("Exhausted")
     return lineup
 
