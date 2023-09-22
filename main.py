@@ -1,4 +1,4 @@
-import copy
+from datetime import datetime
 import csv
 from dataclasses import dataclass, field
 import json
@@ -19,11 +19,13 @@ class Position:
 
 @dataclass
 class Player:
+    PRICE_KEY = 'xbsxPrice'
     id: str
     name: str
     ovr: int
     pos: str
     program: str
+    price: int | None
     chem: str
 
     @staticmethod
@@ -40,11 +42,18 @@ class Player:
             input.get("maxOverall", 0),
             input.get("position", {}).get("abbreviation", "").lower(),
             input.get("program", {}).get("name", ""),
+            input.get(Player.PRICE_KEY),
             chem,
         )
 
     def __str__(self) -> str:
-        return f"{self.ovr}OVR {self.program} {self.name} ({self.chem.upper()})"
+        return f"{self.ovr}OVR {self.program} {self.name} ({self.chem.upper()}) / {self.get_price()}"
+
+    def get_price(self) -> str:
+        if self.price is None:
+            return 'NAT'
+        formatted_price = "{:,}".format(self.price)
+        return f"{formatted_price} coins"
 
     def get_player_id(self) -> str:
         return self.id[-5:]
@@ -138,7 +147,8 @@ class Lineup:
     def to_csv(self, out_file_name: str = "lineup.csv") -> None:
         with open(out_file_name, "w") as out_file:
             to_write: list[list] = []
-            to_write.append(["Position", "Name", "OVR", "Chem", "Program"])
+            now = datetime.now()
+            to_write.append(["Position", "Name", "OVR", "Chem", "Program", f"Price at {now.strftime('%Y-%m-%d %H:%M')}"])
             for position, players in self.players_as_dict().items():
                 for player in players:
                     to_write.append(
@@ -148,6 +158,7 @@ class Lineup:
                             player.ovr,
                             player.chem.upper(),
                             player.program,
+                            player.get_price()
                         ]
                     )
                 to_write.append([None])
