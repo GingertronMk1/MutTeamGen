@@ -8,6 +8,12 @@ from bs4 import BeautifulSoup
 FROM_INTERNET = True
 
 @dataclass
+class Position:
+    name: str
+    abbreviation: str
+    max_in_lineup: int
+    num_in_ovr: int
+@dataclass
 class Player:
     id: str
     name: str
@@ -65,40 +71,49 @@ class Lineup:
     p: list[Player] = field(default_factory=list)
 
     @staticmethod
-    def get_position_numbers() -> dict[str, int]:
+    def get_positions() -> dict[str, Position]:
       return {
-          "qb": 2,
-          "hb": 3,
-          "fb": 1,
-          "wr": 5,
-          "te": 3,
-          "lt": 2,
-          "lg": 2,
-          "c": 2,
-          "rg": 2,
-          "rt": 2,
-          "le": 2,
-          "re": 2,
-          "dt": 4,
-          "lolb": 2,
-          "mlb": 4,
-          "rolb": 2,
-          "cb": 5,
-          "fs": 2,
-          "ss": 2,
-          "k": 1,
-          "p": 1,
+          "qb": Position("Quarterback", "qb", 2, 1),
+          "hb": Position("Halfback", "hb", 3, 2),
+          "fb": Position("Fullback", "fb", 1, 1),
+          "wr": Position("Wide Receiver", "wr", 5, 3),
+          "te": Position("Tight End", "te", 3, 2),
+          "lt": Position("Left Tackle", "lt", 2, 1),
+          "lg": Position("Left Guard", "lg", 2, 1),
+          "c": Position("Center", "c", 2, 1),
+          "rg": Position("Right Guard", "rg", 2, 1),
+          "rt": Position("Right Tackle", "rt", 2, 1),
+          "le": Position("Left End", "le", 2, 1),
+          "re": Position("Right End", "re", 2, 1),
+          "dt": Position("Defensive Tackle", "dt", 4, 2),
+          "lolb": Position("Left Outside Linebacker", "lolb", 2, 1),
+          "mlb": Position("Middle Linebacker", "mlb", 4, 2),
+          "rolb": Position("Right Outside Linebacker", "rolb", 2, 1),
+          "cb": Position("Cornerback", "cb", 5, 3),
+          "fs": Position("Free Safety", "fs", 2, 1),
+          "ss": Position("Strong Safety", "ss", 2, 1),
+          "k": Position("Kicker", "k", 1, 1),
+          "p": Position("Punter", "p", 1, 1),
       }
 
+    def get_overall(self) -> int:
+        ovr_sum: int = 0
+        ovr_num: int = 0
+        for (abbrev, position) in Lineup.get_positions().items():
+            for player in getattr(self, abbrev)[0:position.num_in_ovr]:
+                ovr_sum += player.ovr
+                ovr_num += 1
+        return int(round(ovr_sum / ovr_num))
+
     def is_full(self) -> bool:
-        for (position, number) in self.get_position_numbers().items():
-            if len(getattr(self, position)) < number:
+        for (position, number) in self.get_positions().items():
+            if len(getattr(self, position)) < number.max_in_lineup:
                 return False
         return True
 
     def get_chem_numbers(self) -> dict[str, int]:
         ret_val: dict[str, int] = {}
-        for position in self.get_position_numbers().keys():
+        for position in self.get_positions().keys():
             for player in getattr(self, position):
                 ret_val[player.chem] = ret_val.get(player.chem, 0) + 1
         return ret_val
@@ -115,7 +130,7 @@ class Lineup:
 
     def players_as_dict(self) -> dict[str, list['Player']]:
         players = {}
-        for position in self.get_position_numbers().keys():
+        for position in self.get_positions().keys():
             players_in_position = getattr(self, position)
             players[position] = players_in_position
         return players
@@ -134,6 +149,7 @@ class Lineup:
                 chems.append(chem.upper())
                 numbers.append(number)
             to_write.extend([chems, numbers, []])
+            to_write.append(['OVR', lineup.get_overall()])
             writer = csv.writer(out_file)
             writer.writerows(square_off_list_of_lists(to_write))
 
@@ -146,7 +162,7 @@ def pad_list(input_list: list, target_length: int) -> list:
 
 def gen_lineup():
     lineup = {}
-    for key in Lineup.get_position_numbers().keys():
+    for key in Lineup.get_positions().keys():
         lineup[key] = list()
     return lineup
 
@@ -191,7 +207,7 @@ def get_lineup_for_team(team):
                 position_players = getattr(lineup, position)
                 add_condition = all(
                     [
-                        len(position_players) < Lineup.get_position_numbers()[position],
+                        len(position_players) < Lineup.get_positions()[position].max_in_lineup,
                         retrieved_player.get_player_id() not in list(pos_player.get_player_id() for pos_player in position_players)
                     ]
                 )
@@ -199,9 +215,9 @@ def get_lineup_for_team(team):
                     position_players.append(copy.deepcopy(retrieved_player))
                     setattr(lineup, position, position_players)
                     print(f"Added {retrieved_player.name}")
-                for position, number in Lineup.get_position_numbers().items():
+                for position, number in Lineup.get_positions().items():
                     position_players = getattr(lineup, position)
-                    print(f"{position}: {len(position_players)}/{number}")
+                    # print(f"{position}: {len(position_players)}/{number.max_in_lineup}")
                 if lineup.is_full():
                     print("All Full Up")
                     return lineup
@@ -222,7 +238,7 @@ def get_player_id(player: dict[str, str]) -> str:
 
 def merge_lineups(lineup_1: Lineup, lineup_2: Lineup):
     new_lineup = Lineup()
-    for (position, number) in Lineup.get_position_numbers().items():
+    for (position, number) in Lineup.get_positions().items():
         joined_lineup = getattr(lineup_1, position)
         for player in getattr(lineup_2, position):
             if player.get_player_id() not in list(lineup_1_player.get_player_id() for lineup_1_player in joined_lineup):
@@ -231,7 +247,7 @@ def merge_lineups(lineup_1: Lineup, lineup_2: Lineup):
             joined_lineup,
             key=lambda player: player.ovr,
             reverse= True
-        )[0:number]
+        )[0:number.max_in_lineup]
         setattr(new_lineup, position, new_players)
     return new_lineup
 
@@ -246,3 +262,5 @@ with open(output_dir('lineup.json'), "w") as lineup_file:
     print(json.dumps(lineup_dict, indent=4))
 
 lineup.to_csv(output_dir('lineup.csv'))
+
+print(lineup.get_overall())
