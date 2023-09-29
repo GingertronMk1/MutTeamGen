@@ -144,11 +144,14 @@ class Lineup:
             players[position] = players_in_position
         return players
 
+    def total_price_formatted(self) -> str:
+        return "{:,}".format(self.total_price())
+
     def total_price(self) -> int:
         total: int = 0
         for position in self.get_positions().keys():
             total = total + sum(player.price or 0 for player in getattr(self, position))
-        return "{:,}".format(total)
+        return total
 
     def to_csv(self, out_file_name: str = "lineup.csv") -> None:
         with open(out_file_name, "w") as out_file:
