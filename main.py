@@ -88,7 +88,7 @@ class Lineup:
         return {
             "qb": Position("Quarterback", "qb", 2, 1),
             "hb": Position("Halfback", "hb", 3, 2),
-            "fb": Position("Fullback", "fb", 1, 1),
+            "fb": Position("Fullback", "fb", 2, 1),
             "wr": Position("Wide Receiver", "wr", 5, 3),
             "te": Position("Tight End", "te", 3, 2),
             "lt": Position("Left Tackle", "lt", 2, 1),
@@ -241,7 +241,7 @@ def get_api_players_from_web_page(page_number: int, team: str) -> list[Player]:
 
 def get_lineup() -> Lineup:
     original_lineup = Lineup()
-    acceptable_teams = ["sea", "phi"]
+    acceptable_teams = ["sea", "phi", "bal"]
     combinations: list[tuple[int, str]] = list(
         (page, team_chem) for page in range(1, 100) for team_chem in acceptable_teams
     )
