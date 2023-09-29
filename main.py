@@ -144,6 +144,12 @@ class Lineup:
             players[position] = players_in_position
         return players
 
+    def total_price(self) -> int:
+        total: int = 0
+        for position in self.get_positions().keys():
+            total = total + sum(player.price or 0 for player in getattr(self, position))
+        return "{:,}".format(total)
+
     def to_csv(self, out_file_name: str = "lineup.csv") -> None:
         with open(out_file_name, "w") as out_file:
             to_write: list[list] = []
@@ -162,6 +168,8 @@ class Lineup:
                         ]
                     )
                 to_write.append([None])
+            to_write.append(['TOTAL PRICE', None, None, None, None, f"{self.total_price()} coins"])
+            to_write.append([None])
             chems = []
             numbers = []
             for chem, number in self.get_chem_numbers().items():
