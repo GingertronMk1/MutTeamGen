@@ -171,7 +171,7 @@ class Lineup:
                         ]
                     )
                 to_write.append([None])
-            to_write.append(['TOTAL PRICE', None, None, None, None, f"{self.total_price()} coins"])
+            to_write.append(['TOTAL PRICE', None, None, None, None, f"{self.total_price_formatted()} coins"])
             to_write.append([None])
             chems = []
             numbers = []
