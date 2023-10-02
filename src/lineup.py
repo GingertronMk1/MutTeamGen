@@ -7,6 +7,7 @@ import json
 import multiprocessing
 from src.general import *
 
+
 @dataclass
 class Lineup:
     qb: list[Player] = field(default_factory=list)
@@ -105,7 +106,16 @@ class Lineup:
         with open(out_file_name, "w") as out_file:
             to_write: list[list] = []
             now = datetime.now()
-            to_write.append(["Position", "Name", "OVR", "Chem", "Program", f"Price at {now.strftime('%Y-%m-%d %H:%M')}"])
+            to_write.append(
+                [
+                    "Position",
+                    "Name",
+                    "OVR",
+                    "Chem",
+                    "Program",
+                    f"Price at {now.strftime('%Y-%m-%d %H:%M')}",
+                ]
+            )
             for position, players in self.players_as_dict().items():
                 for player in players:
                     to_write.append(
@@ -115,11 +125,20 @@ class Lineup:
                             player.ovr,
                             player.chem.upper(),
                             player.program,
-                            player.get_price()
+                            player.get_price(),
                         ]
                     )
                 to_write.append([None])
-            to_write.append(['TOTAL PRICE', None, None, None, None, f"{self.total_price_formatted()} coins"])
+            to_write.append(
+                [
+                    "TOTAL PRICE",
+                    None,
+                    None,
+                    None,
+                    None,
+                    f"{self.total_price_formatted()} coins",
+                ]
+            )
             to_write.append([None])
             chems = []
             numbers = []
@@ -145,20 +164,23 @@ class Lineup:
             setattr(self, abbrev, new_players[0 : position.max_in_lineup])
 
     @staticmethod
-    def get_lineup() -> 'Lineup':
+    def get_lineup() -> "Lineup":
         with open("teams.json") as jsonTeams:
             acceptable_teams = json.load(jsonTeams)
         print(acceptable_teams)
         original_lineup = Lineup()
         combinations: list[tuple[int, str]] = list(
-            (page, team_chem) for page in range(1, 100) for team_chem in acceptable_teams
+            (page, team_chem)
+            for page in range(1, 100)
+            for team_chem in acceptable_teams
         )
         with multiprocessing.Pool() as pool:
-            for players in pool.starmap(Player.get_api_players_from_web_page, combinations):
+            for players in pool.starmap(
+                Player.get_api_players_from_web_page, combinations
+            ):
                 for player in players:
                     position = player.pos
                     current_pos_players = getattr(original_lineup, position)
                     current_pos_players.append(player)
                     setattr(original_lineup, position, current_pos_players)
         return original_lineup
-

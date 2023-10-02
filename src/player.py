@@ -3,9 +3,10 @@ from bs4 import BeautifulSoup
 import requests
 from typing import Optional
 
+
 @dataclass
 class Player:
-    PRICE_KEY = 'xbsxPrice'
+    PRICE_KEY = "xbsxPrice"
     id: str
     name: str
     ovr: int
@@ -37,7 +38,7 @@ class Player:
 
     def get_price(self) -> str:
         if self.price is None:
-            return 'NAT'
+            return "NAT"
         formatted_price = "{:,}".format(self.price)
         return f"{formatted_price} coins"
 
@@ -59,13 +60,13 @@ class Player:
         return None
 
     @staticmethod
-    def get_api_player_from_web_link(link: str, team: str) -> Optional['Player']:
+    def get_api_player_from_web_link(link: str, team: str) -> Optional["Player"]:
         split_link = list(s for s in link.split("/") if s)
         player_id = split_link[-1]
         return Player.get_api_player(player_id, team)
 
     @staticmethod
-    def get_api_players_from_web_page(page_number: int, team: str) -> list['Player']:
+    def get_api_players_from_web_page(page_number: int, team: str) -> list["Player"]:
         base_url = "https://www.mut.gg/players"
         params: dict[str, int | str] = {"page": page_number, "team_chem": team}
         retrieved_page = requests.get(base_url, params=params)
@@ -83,5 +84,3 @@ class Player:
             if retrieved_player is not None:
                 ret_val.append(retrieved_player)
         return ret_val
-
-
