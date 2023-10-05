@@ -166,8 +166,11 @@ class Lineup:
     @staticmethod
     def get_lineup() -> "Lineup":
         with open("acceptable_teams.json") as jsonTeams:
-            acceptable_teams = json.load(jsonTeams)
-        print(acceptable_teams)
+            acceptable_teams: list[str] = json.load(jsonTeams)
+        if all(team for team in acceptable_teams):
+            print(acceptable_teams.join(', '))
+        else:
+            print("All teams viewed")
         original_lineup = Lineup()
         combinations: list[tuple[int, str]] = list(
             (page, team_chem)
