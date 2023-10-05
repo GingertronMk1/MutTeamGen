@@ -18,7 +18,7 @@ class Player:
     @staticmethod
     def from_dict(input: dict, chem: str | None = None) -> "Player":
         fullName = f"{input.get('firstName')} {input.get('lastName')}"
-        if chem is None:
+        if not chem:
             team = input.get("team")
             if team is None:
                 raise ValueError("No Team")
@@ -68,7 +68,7 @@ class Player:
     @staticmethod
     def get_api_players_from_web_page(page_number: int, team: str) -> list["Player"]:
         base_url = "https://www.mut.gg/players"
-        params: dict[str, int | str] = {"page": page_number, "team_chem": team}
+        params: dict[str, int | str] = {"page": page_number, "team_chem": team, "max_ovr": "on"}
         retrieved_page = requests.get(base_url, params=params)
         if retrieved_page.status_code != 200:
             return []
