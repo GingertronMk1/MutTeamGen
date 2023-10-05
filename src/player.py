@@ -23,6 +23,8 @@ class Player:
             if team is None:
                 raise ValueError("No Team")
             chem = team.get("abbreviation", "").lower()
+        if chem is None:
+            chem = ""
         return Player(
             str(input.get("externalId", 0)),
             fullName,
