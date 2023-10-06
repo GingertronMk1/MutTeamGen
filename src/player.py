@@ -12,7 +12,7 @@ class Player:
     ovr: int
     pos: str
     program: str
-    price: int | None
+    price: int
     chem: str
 
     @staticmethod
@@ -25,13 +25,16 @@ class Player:
             chem = team.get("abbreviation", "").lower()
         if chem is None:
             chem = ""
+        price = 0
+        if input.get(Player.PRICE_KEY) is not None:
+            price = input.get(Player.PRICE_KEY)
         return Player(
             str(input.get("externalId", 0)),
             fullName,
             input.get("maxOverall", 0),
             input.get("position", {}).get("abbreviation", "").lower(),
             input.get("program", {}).get("name", ""),
-            input.get(Player.PRICE_KEY),
+            price,
             chem,
         )
 
@@ -39,7 +42,7 @@ class Player:
         return f"{self.ovr}OVR {self.program} {self.name} ({self.chem.upper()}) / {self.get_price()}"
 
     def get_price(self) -> str:
-        if self.price is None:
+        if self.price == 0:
             return "NAT"
         formatted_price = "{:,}".format(self.price)
         return f"{formatted_price} coins"

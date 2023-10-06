@@ -152,9 +152,9 @@ class Lineup:
 
     def make_best(self) -> None:
         for abbrev, position in self.get_positions().items():
-            position_players: list[Player] = sorted(
-                getattr(self, abbrev), key=lambda p: p.ovr, reverse=True
-            )
+            position_players: list[Player] = getattr(self, abbrev)
+            position_players.sort(key=lambda p: p.price)
+            position_players.sort(key=lambda p: p.ovr, reverse=True)
             new_players: list[Player] = list()
             for player in position_players:
                 if player.get_player_id() not in list(
