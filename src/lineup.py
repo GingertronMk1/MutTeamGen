@@ -168,7 +168,7 @@ class Lineup:
         with open("acceptable_teams.json") as jsonTeams:
             acceptable_teams: list[str] = json.load(jsonTeams)
         if all(team for team in acceptable_teams):
-            print(acceptable_teams.join(', '))
+            print(", ".join(acceptable_teams))
         else:
             print("All teams viewed")
         original_lineup = Lineup()

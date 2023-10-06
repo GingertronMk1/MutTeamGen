@@ -25,9 +25,7 @@ class Player:
             chem = team.get("abbreviation", "").lower()
         if chem is None:
             chem = ""
-        price = 0
-        if input.get(Player.PRICE_KEY) is not None:
-            price = input.get(Player.PRICE_KEY)
+        price = int(input.get(Player.PRICE_KEY, 0))
         return Player(
             str(input.get("externalId", 0)),
             fullName,
@@ -73,7 +71,11 @@ class Player:
     @staticmethod
     def get_api_players_from_web_page(page_number: int, team: str) -> list["Player"]:
         base_url = "https://www.mut.gg/players"
-        params: dict[str, int | str] = {"page": page_number, "team_chem": team, "max_ovr": "on"}
+        params: dict[str, int | str] = {
+            "page": page_number,
+            "team_chem": team,
+            "max_ovr": "on",
+        }
         retrieved_page = requests.get(base_url, params=params)
         if retrieved_page.status_code != 200:
             return []
