@@ -153,9 +153,9 @@ class Lineup:
 
     def make_best(self) -> None:
         for abbrev, position in self.get_positions().items():
-            position_players: list[Player] = sorted(
-                getattr(self, abbrev), key=lambda p: p.ovr, reverse=True
-            )
+            position_players: list[Player] = getattr(self, abbrev)
+            position_players.sort(key=lambda p: p.price)
+            position_players.sort(key=lambda p: p.ovr, reverse=True)
             new_players: list[Player] = list()
             for player in position_players:
                 if player.get_player_id() not in list(
@@ -169,7 +169,7 @@ class Lineup:
         with open("acceptable_teams.json") as jsonTeams:
             acceptable_teams: list[str] = json.load(jsonTeams)
         if all(team for team in acceptable_teams):
-            print(acceptable_teams.join(', '))
+            print(", ".join(acceptable_teams))
         else:
             print("All teams viewed")
         original_lineup = Lineup()
