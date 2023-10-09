@@ -39,8 +39,6 @@ jobs:
         continue-on-error: true
       - name: Run
         run: ./bin/run
-      - name: Output
-        run: ./bin/view-output
       - name: Upload docs for next step
         uses: actions/upload-artifact@v2
         with:
