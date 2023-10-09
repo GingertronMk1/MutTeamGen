@@ -1,5 +1,0 @@
-#!/usr/bin/env sh
-
-cd ./docs \
-    && find .. -name "*.py" -type f \
-    | xargs -I % bash -c "pydoc -w %"
