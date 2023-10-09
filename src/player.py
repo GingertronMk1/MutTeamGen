@@ -47,7 +47,11 @@ class Player:
         )
 
     def __str__(self) -> str:
-        return f"{self.ovr}OVR {self.program} {self.name} ({self.chem.upper()}) / {self.get_price()}"
+        ratings_arr: list[str] = []
+        for key, value in self.ratings.items():
+            ratings_arr.append(f"{key}: {value}")
+        ratings_str: str = "; ".join(ratings_arr)
+        return f"{self.ovr}OVR {self.program} {self.name} ({self.chem.upper()}) / {self.get_price()} / {ratings_str}"
 
     def get_price(self) -> str:
         if self.price == 0:
@@ -60,7 +64,6 @@ class Player:
 
     @staticmethod
     def get_api_player(id: str, team: str) -> Optional["Player"]:
-        ret_val = None
         try:
             ret_val: dict = (
                 requests.get(f"https://www.mut.gg/api/mutdb/player-items/{id}")
@@ -68,10 +71,8 @@ class Player:
                 .get("data")
             )
         except:
-            pass
-        if ret_val is not None:
-            return Player.from_dict(ret_val, team)
-        return None
+            return None
+        return Player.from_dict(ret_val, team)
 
     @staticmethod
     def get_ratings_from_web_link(link: str) -> dict[str, int]:
