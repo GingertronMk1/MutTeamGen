@@ -4,6 +4,7 @@ import json
 from sys import exit
 import argparse
 import itertools
+from math import factorial
 
 
 def do_generate(args: argparse.Namespace):
@@ -27,13 +28,16 @@ def do_team_for_price(args: argparse.Namespace):
         all_players = list(
             player for position in all_positions.values() for player in position if player.get('ovr') > 84
         )
+        num_players = len(all_players)
+        num_players_factorial = factorial(num_players)
         print('; '.join(player.get('name') for player in all_players))
         filtered_combos = []
         for i in range(min(5, len(all_players)), 1, -1):
             print(f"Combinations of length {i}")
             all_combos = itertools.combinations(all_players, i)
+            num_combos = int(num_players_factorial / (factorial(num_players - i) * factorial(i)))
             for (n, combo) in enumerate(all_combos):
-                print(f"Checking combination {n} with limit {i}")
+                print(f"Checking combination {n} out of {num_combos}")
                 total_price = sum(player.get("price", 0) for player in combo)
                 if total_price < val and not any(
                     set(player.get('id') for player in combo).issuperset(set(player.get('id') for player in curr_combo)) for curr_combo in filtered_combos
