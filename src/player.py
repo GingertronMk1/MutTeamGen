@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+import json
 from bs4 import BeautifulSoup
 import requests
 from typing import Optional
@@ -14,9 +15,12 @@ class Player:
     program: str
     price: int
     chem: str
+    ratings: dict[str, int]
 
     @staticmethod
-    def from_dict(input: dict, chem: str | None = None) -> "Player":
+    def from_dict(
+        input: dict, chem: str | None = None, ratings: dict[str, int] | None = None
+    ) -> "Player":
         fullName = f"{input.get('firstName')} {input.get('lastName')}"
         if not chem:
             team = input.get("team")
@@ -26,6 +30,8 @@ class Player:
         if chem is None:
             chem = ""
         price = int(input.get(Player.PRICE_KEY, 0))
+        if ratings is None:
+            ratings = {}
         return Player(
             str(input.get("externalId", 0)),
             fullName,
@@ -34,6 +40,7 @@ class Player:
             input.get("program", {}).get("name", ""),
             price,
             chem,
+            ratings,
         )
 
     def __str__(self) -> str:
@@ -63,10 +70,28 @@ class Player:
         return None
 
     @staticmethod
+    def get_ratings_from_web_link(link: str) -> dict[str, int]:
+        ratings = {}
+        base_url = "https://www.mut.gg"
+        player_url = f"{base_url}{link}"
+        request_response = requests.get(player_url)
+        print(f"{player_url} returns {request_response.status_code}")
+        soup = BeautifulSoup(request_response.content, "html.parser")
+        for rating in soup.find_all(class_="rating"):
+            rating_name = rating.find(class_="rating__label").text
+            rating_value = rating.find(class_="rating__value").text
+            ratings[rating_name] = rating_value
+        return ratings
+
+    @staticmethod
     def get_api_player_from_web_link(link: str, team: str) -> Optional["Player"]:
-        split_link = list(s for s in link.split("/") if s)
+        split_link = list(s for s in link.split("/") if s and not s.startswith("?"))
         player_id = split_link[-1]
-        return Player.get_api_player(player_id, team)
+        player_ratings = Player.get_ratings_from_web_link(link)
+        player = Player.get_api_player(player_id, team)
+        if player is not None:
+            player.ratings = player_ratings
+        return player
 
     @staticmethod
     def get_api_players_from_web_page(page_number: int, team: str) -> list["Player"]:

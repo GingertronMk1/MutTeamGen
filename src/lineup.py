@@ -154,8 +154,7 @@ class Lineup:
     def make_best(self) -> None:
         for abbrev, position in self.get_positions().items():
             position_players: list[Player] = getattr(self, abbrev)
-            position_players.sort(key=lambda p: p.price)
-            position_players.sort(key=lambda p: p.ovr, reverse=True)
+            position_players.sort(key=lambda p: (p.ovr, 0 - p.price), reverse=True)
             new_players: list[Player] = list()
             for player in position_players:
                 if player.get_player_id() not in list(
@@ -179,6 +178,7 @@ class Lineup:
             for team_chem in acceptable_teams
         )
         with multiprocessing.Pool() as pool:
+            # for players in [Player.get_api_players_from_web_page(page, team) for (page, team) in combinations]:
             for players in pool.starmap(
                 Player.get_api_players_from_web_page, combinations
             ):
