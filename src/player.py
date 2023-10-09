@@ -1,5 +1,4 @@
 from dataclasses import dataclass
-import json
 from bs4 import BeautifulSoup
 import requests
 from typing import Optional
@@ -71,6 +70,8 @@ class Player:
                 .json()
                 .get("data")
             )
+            if argparser().include_captains and ret_val.get("program", {}).get("id", 0) == 240:
+              return None
         except:
             return None
         return Player.from_dict(ret_val, team)
@@ -81,7 +82,7 @@ class Player:
         base_url = "https://www.mut.gg"
         player_url = f"{base_url}{link}"
         request_response = requests.get(player_url)
-        print(f"{player_url} returns {request_response.status_code}")
+        # print(f"{player_url} returns {request_response.status_code}")
         soup = BeautifulSoup(request_response.content, "html.parser")
         for sub_soup in soup.find_all(class_="rating-group")[1:]:
             for rating in sub_soup.find_all(class_="rating"):
@@ -89,7 +90,7 @@ class Player:
                 rating_value = rating.find(class_="rating__value").text
                 ratings[rating_name] = rating_value
         ratings = sort_dict(ratings)
-        print(json.dumps(ratings))
+        # print(json.dumps(ratings))
         return ratings
 
     @staticmethod
@@ -119,7 +120,7 @@ class Player:
         for lkey, link in enumerate(
             retrieved_page_soup.find_all("a", class_="player-list-item__link")
         ):
-            print(f"{team.upper()} {page_number} | {lkey}")
+            # print(f"{team.upper()} {page_number} | {lkey}")
             href = link.get("href")
             retrieved_player = Player.get_api_player_from_web_link(href, team)
             if retrieved_player is not None:
