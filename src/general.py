@@ -24,11 +24,24 @@ def sort_dict(d: dict, by_key: bool = True) -> dict:
     return dict(sorted_vals)
 
 
-def argparser() -> argparse.Namespace:
+def argparser() -> argparse.ArgumentParser:
     parser: argparse.ArgumentParser = argparse.ArgumentParser(
         prog="MutTeamGen", description="Generates a MUT team from mut.gg"
     )
-    parser.add_argument("--include-captains", action="store_true")  # on/off flag
-    args = parser.parse_args()
-    # print(args)
-    return args
+    subparsers: argparse._SubParsersAction = parser.add_subparsers()
+
+    generate_subparser: argparse.ArgumentParser = subparsers.add_parser(
+        "generate", help="Generate a lineup based on provided team options"
+    )
+    generate_subparser.add_argument("--teams", action="append")
+
+    for_price_subparser: argparse.ArgumentParser = subparsers.add_parser(
+        "team-for-price",
+        help="From a generated lineup, see what options you have given a number of coins",
+    )
+    for_price_subparser.add_argument("val", action="store")
+    return parser
+
+
+def args() -> argparse.Namespace:
+    return argparser().parse_args()

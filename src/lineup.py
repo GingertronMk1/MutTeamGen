@@ -6,6 +6,7 @@ from datetime import datetime
 import json
 import multiprocessing
 from src.general import *
+from itertools import combinations
 
 
 @dataclass
@@ -60,7 +61,7 @@ class Lineup:
 
     def get_overall(self) -> int:
         ovr_sum: int = 0
-        ovr_num: int = 0
+        ovr_num: int = 1
         for abbrev, position in Lineup.get_positions().items():
             for player in getattr(self, abbrev)[0 : position.num_in_ovr]:
                 ovr_sum += player.ovr
@@ -92,6 +93,13 @@ class Lineup:
             players_in_position = getattr(self, position)
             players[position] = players_in_position
         return players
+
+    def players_as_list(self) -> list[Player]:
+        return list(
+            player
+            for position in self.players_as_dict().values()
+            for player in position
+        )
 
     def total_price_formatted(self) -> str:
         return "{:,}".format(self.total_price())
@@ -160,7 +168,7 @@ class Lineup:
                     new_player.get_player_id() for new_player in new_players
                 ):
                     new_players.append(player)
-            setattr(self, abbrev, new_players[0 : (2 * position.max_in_lineup)])
+            setattr(self, abbrev, new_players[0 : position.max_in_lineup])
 
     @staticmethod
     def get_lineup() -> "Lineup":
@@ -186,3 +194,10 @@ class Lineup:
                     current_pos_players.append(player)
                     setattr(original_lineup, position, current_pos_players)
         return original_lineup
+
+    def best_for_price(self, price: int) -> list[Player]:
+        players = self.players_as_list()
+        combos = combinations(players)
+        return list(
+            combo for combo in combos if sum(player.price for player in combo) < price
+        )

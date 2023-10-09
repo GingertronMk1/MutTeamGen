@@ -70,11 +70,11 @@ class Player:
                 .json()
                 .get("data")
             )
-            if (
-                argparser().include_captains
-                and ret_val.get("program", {}).get("id", 0) == 240
-            ):
-                return None
+            # if (
+            #     args().include_captains
+            #     and ret_val.get("program", {}).get("id", 0) == 240
+            # ):
+            #     return None
         except:
             return None
         return Player.from_dict(ret_val, team)
@@ -123,7 +123,7 @@ class Player:
         for lkey, link in enumerate(
             retrieved_page_soup.find_all("a", class_="player-list-item__link")
         ):
-            # print(f"{team.upper()} {page_number} | {lkey}")
+            print(f"{team.upper()} {page_number} | {lkey}")
             href = link.get("href")
             retrieved_player = Player.get_api_player_from_web_link(href, team)
             if retrieved_player is not None:
