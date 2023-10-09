@@ -160,7 +160,7 @@ class Lineup:
                     new_player.get_player_id() for new_player in new_players
                 ):
                     new_players.append(player)
-            setattr(self, abbrev, new_players[0 : position.max_in_lineup])
+            setattr(self, abbrev, new_players[0 : (2 * position.max_in_lineup)])
 
     @staticmethod
     def get_lineup() -> "Lineup":
