@@ -84,10 +84,10 @@ class Player:
         print(f"{player_url} returns {request_response.status_code}")
         soup = BeautifulSoup(request_response.content, "html.parser")
         for sub_soup in soup.find_all(class_="rating-group")[1:]:
-          for rating in sub_soup.find_all(class_="rating"):
-              rating_name = rating.find(class_="rating__label").text
-              rating_value = rating.find(class_="rating__value").text
-              ratings[rating_name] = rating_value
+            for rating in sub_soup.find_all(class_="rating"):
+                rating_name = rating.find(class_="rating__label").text
+                rating_value = rating.find(class_="rating__value").text
+                ratings[rating_name] = rating_value
         ratings = sort_dict(ratings)
         print(json.dumps(ratings))
         return ratings

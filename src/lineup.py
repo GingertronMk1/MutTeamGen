@@ -78,7 +78,7 @@ class Lineup:
         for position in self.get_positions().keys():
             for player in getattr(self, position):
                 ret_val[player.chem] = ret_val.get(player.chem, 0) + 1
-        return sort_dict(ret_val, by_key = False)
+        return sort_dict(ret_val, by_key=False)
 
     def to_dict(self) -> dict:
         players = {}

@@ -19,8 +19,8 @@ def pad_list(input_list: list, target_length: int) -> list:
 def get_player_id(player: dict[str, str]) -> str:
     return str(player.get("externalId", 0))[-5:]
 
+
 def sort_dict(d: dict, by_key: bool = True) -> dict:
     sort_key = 0 if by_key else 1
     sorted_vals = sorted(d.items(), key=lambda x: x[sort_key], reverse=not by_key)
     return dict(sorted_vals)
-
