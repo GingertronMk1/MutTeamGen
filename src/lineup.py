@@ -178,7 +178,6 @@ class Lineup:
             for team_chem in acceptable_teams
         )
         with multiprocessing.Pool() as pool:
-            # for players in [Player.get_api_players_from_web_page(page, team) for (page, team) in combinations]:
             for players in pool.starmap(
                 Player.get_api_players_from_web_page, combinations
             ):

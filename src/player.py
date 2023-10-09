@@ -29,7 +29,10 @@ class Player:
             chem = team.get("abbreviation", "").lower()
         if chem is None:
             chem = ""
-        price = int(input.get(Player.PRICE_KEY, 0))
+        price = input.get(Player.PRICE_KEY, 0)
+        if price is None:
+            price = 0
+        price = int(price)
         if ratings is None:
             ratings = {}
         return Player(
@@ -57,16 +60,17 @@ class Player:
 
     @staticmethod
     def get_api_player(id: str, team: str) -> Optional["Player"]:
+        ret_val = None
         try:
             ret_val: dict = (
                 requests.get(f"https://www.mut.gg/api/mutdb/player-items/{id}")
                 .json()
                 .get("data")
             )
-            if ret_val.get("program", {}).get("id", 0) != 240:
-                return Player.from_dict(ret_val, team)
         except:
             pass
+        if ret_val is not None:
+            return Player.from_dict(ret_val, team)
         return None
 
     @staticmethod
