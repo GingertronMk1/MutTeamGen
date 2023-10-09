@@ -70,8 +70,11 @@ class Player:
                 .json()
                 .get("data")
             )
-            if argparser().include_captains and ret_val.get("program", {}).get("id", 0) == 240:
-              return None
+            if (
+                argparser().include_captains
+                and ret_val.get("program", {}).get("id", 0) == 240
+            ):
+                return None
         except:
             return None
         return Player.from_dict(ret_val, team)
