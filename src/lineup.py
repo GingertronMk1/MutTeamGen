@@ -78,13 +78,12 @@ class Lineup:
         for position in self.get_positions().keys():
             for player in getattr(self, position):
                 ret_val[player.chem] = ret_val.get(player.chem, 0) + 1
-        sorted_ret_val = sorted(ret_val.items(), key=lambda x: x[1], reverse=True)
-        return dict(sorted_ret_val)
+        return sort_dict(ret_val, by_key = False)
 
     def to_dict(self) -> dict:
         players = {}
         for position, pos_players in self.players_as_dict().items():
-            players[position] = [str(player) for player in pos_players]
+            players[position] = [player.__dict__ for player in pos_players]
         return {"totals": self.get_chem_numbers(), "players": players}
 
     def players_as_dict(self) -> dict[str, list["Player"]]:
