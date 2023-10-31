@@ -107,13 +107,14 @@ class Player:
         return player
 
     @staticmethod
-    def get_api_players_from_web_page(page_number: int, team: str) -> list["Player"]:
+    def get_api_players_from_web_page(team: str, position: int|None = None) -> list["Player"]:
         base_url = "https://www.mut.gg/players"
         params: dict[str, int | str] = {
-            "page": page_number,
             "team_chem": team,
             "max_ovr": "on",
         }
+        if position is not None:
+            params["positions"] = position
         retrieved_page = requests.get(base_url, params=params)
         if retrieved_page.status_code != 200:
             return []
@@ -123,7 +124,13 @@ class Player:
         for lkey, link in enumerate(
             retrieved_page_soup.find_all("a", class_="player-list-item__link")
         ):
-            # print(f"{team.upper()} {page_number} | {lkey}")
+            printing: list[str] = []
+            if team != "":
+                printing.append(f"Team: {team.upper()}")
+            printing.append(f"Player {lkey}")
+            if position is not None:
+                printing.append(f"Position {position}")
+            print(" | ".join(str(pr) for pr in printing))
             href = link.get("href")
             retrieved_player = Player.get_api_player_from_web_link(href, team)
             if retrieved_player is not None:

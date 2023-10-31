@@ -172,9 +172,9 @@ class Lineup:
             print("All teams viewed")
         original_lineup = Lineup()
         combinations: list[tuple[int, str]] = list(
-            (page, team_chem)
-            for page in range(1, 100)
+            (team_chem, position)
             for team_chem in acceptable_teams
+            for position in range(1, 21)
         )
         with multiprocessing.Pool() as pool:
             for players in pool.starmap(
