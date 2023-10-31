@@ -171,7 +171,7 @@ class Lineup:
         else:
             print("All teams viewed")
         original_lineup = Lineup()
-        combinations: list[tuple[int, str]] = list(
+        combinations: list[tuple[str, int]] = list(
             (team_chem, position)
             for team_chem in acceptable_teams
             for position in range(1, 21)
