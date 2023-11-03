@@ -32,50 +32,24 @@ class Lineup:
     k: list[Player] = field(default_factory=list)
     p: list[Player] = field(default_factory=list)
 
-    @staticmethod
-    def get_positions() -> dict[str, Position]:
-        return {
-            "qb": Position("Quarterback", "qb", 2, 1),
-            "hb": Position("Halfback", "hb", 3, 2),
-            "fb": Position("Fullback", "fb", 2, 1),
-            "wr": Position("Wide Receiver", "wr", 5, 3),
-            "te": Position("Tight End", "te", 3, 2),
-            "lt": Position("Left Tackle", "lt", 2, 1),
-            "lg": Position("Left Guard", "lg", 2, 1),
-            "c": Position("Center", "c", 2, 1),
-            "rg": Position("Right Guard", "rg", 2, 1),
-            "rt": Position("Right Tackle", "rt", 2, 1),
-            "le": Position("Left End", "le", 2, 1),
-            "re": Position("Right End", "re", 2, 1),
-            "dt": Position("Defensive Tackle", "dt", 4, 2),
-            "lolb": Position("Left Outside Linebacker", "lolb", 2, 1),
-            "mlb": Position("Middle Linebacker", "mlb", 4, 2),
-            "rolb": Position("Right Outside Linebacker", "rolb", 2, 1),
-            "cb": Position("Cornerback", "cb", 5, 3),
-            "fs": Position("Free Safety", "fs", 2, 1),
-            "ss": Position("Strong Safety", "ss", 2, 1),
-            "k": Position("Kicker", "k", 1, 1),
-            "p": Position("Punter", "p", 1, 1),
-        }
-
     def get_overall(self) -> int:
         ovr_sum: int = 0
         ovr_num: int = 0
-        for abbrev, position in Lineup.get_positions().items():
-            for player in getattr(self, abbrev)[0 : position.num_in_ovr]:
+        for position in Position.get_all():
+            for player in getattr(self, position.abbreviation)[0 : position.num_in_ovr]:
                 ovr_sum += player.ovr
                 ovr_num += 1
         return int(round(ovr_sum / ovr_num))
 
     def is_full(self) -> bool:
-        for position, number in self.get_positions().items():
+        for position, number in Position.get_all():
             if len(getattr(self, position)) < number.max_in_lineup:
                 return False
         return True
 
     def get_chem_numbers(self) -> dict[str, int]:
         ret_val: dict[str, int] = {}
-        for position in self.get_positions().keys():
+        for position in [pos.abbreviation for pos in Position.get_all()]:
             for player in getattr(self, position):
                 ret_val[player.chem] = ret_val.get(player.chem, 0) + 1
         return sort_dict(ret_val, by_key=False)
@@ -88,7 +62,7 @@ class Lineup:
 
     def players_as_dict(self) -> dict[str, list["Player"]]:
         players = {}
-        for position in self.get_positions().keys():
+        for position in [pos.abbreviation for pos in Position.get_all()]:
             players_in_position = getattr(self, position)
             players[position] = players_in_position
         return players
@@ -98,7 +72,7 @@ class Lineup:
 
     def total_price(self) -> int:
         total: int = 0
-        for position in self.get_positions().keys():
+        for position in [pos.abbreviation for pos in Position.get_all()]:
             total = total + sum(player.price or 0 for player in getattr(self, position))
         return total
 
@@ -151,8 +125,8 @@ class Lineup:
             writer.writerows(square_off_list_of_lists(to_write))
 
     def make_best(self) -> None:
-        for abbrev, position in self.get_positions().items():
-            position_players: list[Player] = getattr(self, abbrev)
+        for position in Position.get_all():
+            position_players: list[Player] = getattr(self, position.abbreviation)
             position_players.sort(key=lambda p: (p.ovr, 0 - p.price), reverse=True)
             new_players: list[Player] = list()
             for player in position_players:
@@ -160,7 +134,7 @@ class Lineup:
                     new_player.get_player_id() for new_player in new_players
                 ):
                     new_players.append(player)
-            setattr(self, abbrev, new_players[0 : (2 * position.max_in_lineup)])
+            setattr(self, position.abbreviation, new_players[0 : position.max_in_lineup])
 
     @staticmethod
     def get_lineup() -> "Lineup":
@@ -174,7 +148,7 @@ class Lineup:
         combinations: list[tuple[str, int]] = list(
             (team_chem, position)
             for team_chem in acceptable_teams
-            for position in range(1, 21)
+            for position in Position.get_all()
         )
         with multiprocessing.Pool() as pool:
             for players in pool.starmap(

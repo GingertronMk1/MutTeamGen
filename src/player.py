@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import requests
 from typing import Optional
 from src.general import *
+from src.position import Position
 
 
 @dataclass
@@ -108,7 +109,7 @@ class Player:
 
     @staticmethod
     def get_api_players_from_web_page(
-        team: str, position: int | None = None
+        team: str, position: Position | None = None
     ) -> list["Player"]:
         base_url = "https://www.mut.gg/players"
         params: dict[str, int | str] = {
@@ -116,7 +117,7 @@ class Player:
             "max_ovr": "on",
         }
         if position is not None:
-            params["positions"] = position
+            params["positions"] = position.search_key_value
         retrieved_page = requests.get(base_url, params=params)
         if retrieved_page.status_code != 200:
             return []
@@ -131,7 +132,7 @@ class Player:
                 printing.append(f"Team: {team.upper()}")
             printing.append(f"Player {lkey}")
             if position is not None:
-                printing.append(f"Position {position}")
+                printing.append(position.name)
             print(" | ".join(str(pr) for pr in printing))
             href = link.get("href")
             retrieved_player = Player.get_api_player_from_web_link(href, team)
