@@ -115,7 +115,7 @@ class Player:
         params: dict[str, int | str] = {
             "team_chem": team,
             "max_ovr": "on",
-            "sorts": ",".join(["-overall", "price"])
+            "sorts": ",".join(["-overall", "price"]),
         }
         if position is not None:
             params["positions"] = position.search_key_value

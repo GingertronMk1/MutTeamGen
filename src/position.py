@@ -10,7 +10,7 @@ class Position:
     search_key_value: int
 
     @staticmethod
-    def get_all() -> list['Position']:
+    def get_all() -> list["Position"]:
         return [
             Position("Quarterback", "qb", 2, 1, 1),
             Position("Halfback", "hb", 3, 2, 2),

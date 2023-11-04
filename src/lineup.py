@@ -134,7 +134,9 @@ class Lineup:
                     new_player.get_player_id() for new_player in new_players
                 ):
                     new_players.append(player)
-            setattr(self, position.abbreviation, new_players[0 : position.max_in_lineup])
+            setattr(
+                self, position.abbreviation, new_players[0 : position.max_in_lineup]
+            )
 
     @staticmethod
     def get_lineup() -> "Lineup":
@@ -145,7 +147,7 @@ class Lineup:
         else:
             print("All teams viewed")
         original_lineup = Lineup()
-        combinations: list[tuple[str, int]] = list(
+        combinations: list[tuple[str, Position]] = list(
             (team_chem, position)
             for team_chem in acceptable_teams
             for position in Position.get_all()
