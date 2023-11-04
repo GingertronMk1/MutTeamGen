@@ -42,8 +42,8 @@ class Lineup:
         return int(round(ovr_sum / ovr_num))
 
     def is_full(self) -> bool:
-        for position, number in Position.get_all():
-            if len(getattr(self, position)) < number.max_in_lineup:
+        for position in Position.get_all():
+            if len(getattr(self, position.abbreviation)) < position.max_in_lineup:
                 return False
         return True
 
