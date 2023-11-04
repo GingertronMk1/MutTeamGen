@@ -8,7 +8,6 @@ from src.position import Position
 
 @dataclass
 class Player:
-    PRICE_KEY = "xbsxPrice"
     id: str
     name: str
     ovr: int
@@ -17,6 +16,8 @@ class Player:
     price: int
     chem: str
     ratings: dict[str, int]
+    PRICE_KEY: str = "xbsxPrice"
+    MARKET: int = 3
 
     @staticmethod
     def from_dict(
@@ -86,7 +87,6 @@ class Player:
         base_url = "https://www.mut.gg"
         player_url = f"{base_url}{link}"
         request_response = requests.get(player_url)
-        # print(f"{player_url} returns {request_response.status_code}")
         soup = BeautifulSoup(request_response.content, "html.parser")
         for sub_soup in soup.find_all(class_="rating-group")[1:]:
             for rating in sub_soup.find_all(class_="rating"):
@@ -94,7 +94,6 @@ class Player:
                 rating_value = rating.find(class_="rating__value").text
                 ratings[rating_name] = rating_value
         ratings = sort_dict(ratings)
-        # print(json.dumps(ratings))
         return ratings
 
     @staticmethod
@@ -116,12 +115,14 @@ class Player:
             "team_chem": team,
             "max_ovr": "on",
             "sorts": ",".join(["-overall", "price"]),
+            "market": Player.MARKET,
         }
         if position is not None:
             params["positions"] = position.search_key_value
         retrieved_page = requests.get(base_url, params=params)
         if retrieved_page.status_code != 200:
             return []
+        print(retrieved_page.url)
         retrieved_text: str = retrieved_page.text
         retrieved_page_soup = BeautifulSoup(retrieved_text, "html.parser")
         ret_val = list()
