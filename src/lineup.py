@@ -142,10 +142,11 @@ class Lineup:
     def get_lineup() -> "Lineup":
         with open("acceptable_teams.json") as jsonTeams:
             acceptable_teams: list[str] = json.load(jsonTeams)
-        if all(team for team in acceptable_teams):
+        if len(acceptable_teams) > 0 and all(team for team in acceptable_teams):
             print(", ".join(acceptable_teams))
         else:
             print("All teams viewed")
+            acceptable_teams = ['']
         original_lineup = Lineup()
         combinations: list[tuple[str, Position]] = list(
             (team_chem, position)
