@@ -77,19 +77,17 @@ class Lineup:
 
     def to_markdown(self, out_file_name: str = "lineup.md") -> None:
         with open(out_file_name, "w") as out_file:
-            to_write: list[list[str]] = []
+            to_write: list[list] = []
             now = datetime.now()
             header_row = [
-                    "Position",
-                    "Name",
-                    "OVR",
-                    "Chem",
-                    "Program",
-                    f"Price at {now.strftime('%Y-%m-%d %H:%M')}",
-                ]
-            to_write.append(
-              header_row
-            )
+                "Position",
+                "Name",
+                "OVR",
+                "Chem",
+                "Program",
+                f"Price at {now.strftime('%Y-%m-%d %H:%M')}",
+            ]
+            to_write.append(header_row)
             to_write.append(["---"] * len(header_row))
             for position, players in self.players_as_dict().items():
                 for player in players:
@@ -103,7 +101,9 @@ class Lineup:
                             player.get_price(),
                         ]
                     )
-            out_file_str = "\n".join(" | ".join(str(item) for item in row) for row in to_write)
+            out_file_str = "\n".join(
+                " | ".join(str(item) for item in row) for row in to_write
+            )
             out_file.write(out_file_str)
 
     def to_csv(self, out_file_name: str = "lineup.csv") -> None:
