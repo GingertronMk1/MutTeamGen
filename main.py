@@ -15,3 +15,4 @@ with open("acceptable_teams.json") as jsonTeams:
         lineup = Lineup.get_lineup(acceptable_teams=acceptable_team_list)
         lineup.make_best()
         lineup.to_csv(output_dir(f"{slugged_teams}.csv"))
+        lineup.to_markdown(output_dir(f"{slugged_teams}.md"))
