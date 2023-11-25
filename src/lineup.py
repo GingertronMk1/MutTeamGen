@@ -101,10 +101,16 @@ class Lineup:
                             player.get_price(),
                         ]
                     )
-            out_file_str = "\n".join(
+            lineup_str = "\n".join(
                 " | ".join(str(item) for item in row) for row in to_write
             )
-            out_file.write(out_file_str)
+            chems_list: list[list] = [["Chem", "Number"], ["---", "---"]]
+            for chem, number in self.get_chem_numbers().items():
+                chems_list.append([chem.upper(), number])
+            chems_str = "\n".join(
+                " | ".join(str(item) for item in row) for row in chems_list
+            )
+            out_file.write("\n\n".join([lineup_str, chems_str]))
 
     def to_csv(self, out_file_name: str = "lineup.csv") -> None:
         with open(out_file_name, "w") as out_file:
