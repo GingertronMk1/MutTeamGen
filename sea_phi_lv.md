@@ -1,0 +1,60 @@
+Position | Name | OVR | Chem | Program | Price at 2024-01-09 18:20
+--- | --- | --- | --- | --- | ---
+QB | Michael Vick | 94 | PHI | Cover Athletes | 795,000 coins
+QB | William Perry | 94 | PHI | Zero Chill | 1,000,000 coins
+HB | Todd Gurley II | 96 | SEA | Team Diamonds | 3,000,000 coins
+HB | Michael Vick | 94 | PHI | Cover Athletes | 983,500 coins
+HB | Edgerrin James | 92 | SEA | Redux | 150,000 coins
+FB | Alec Ingold | 90 | LV | Zero Chill | 71,700 coins
+FB | Keith Smith | 90 | LV | Ghost Of MUT | 80,500 coins
+WR | Amari Cooper | 95 | LV | Team of the Week | 823,500 coins
+WR | Randy Moss | 94 | LV | Legends | 596,000 coins
+WR | Julio Jones | 93 | PHI | Zero Chill | 249,250 coins
+WR | A.J. Brown | 93 | PHI | Zero Chill | 256,000 coins
+WR | Darrius Heyward-Bey | 93 | LV | Ghost Of MUT | 302,250 coins
+TE | Jimmy Graham | 92 | SEA | Team Diamonds | 299,750 coins
+TE | Greg Olsen | 91 | SEA | All Madden | 85,600 coins
+TE | Dallas Goedert | 90 | PHI | Angry Runs | 65,500 coins
+LT | Jordan Mailata | 89 | PHI | Harvest | 30,550 coins
+LT | C. Cross Sweet Feet | 89 | SEA | AKA | 69,500 coins
+LG | Landon Dickerson | 87 | PHI | Most Feared | 12,650 coins
+LG | Gene Upshaw | 87 | LV | Redux | 13,000 coins
+C | Kevin Glover | 92 | SEA | Team Diamonds | 295,500 coins
+C | Andre James | 89 | LV | Team Builders | 63,400 coins
+RG | Cam Jurgens | 89 | PHI | Team Builders | 62,750 coins
+RG | Nate Herbig | 85 | PHI | Ultimate Kickoff | 9,040 coins
+RT | Jon Runyan | 94 | PHI | Campus Heroes II | 400,000 coins
+RT | Lincoln Kennedy | 92 | LV | Team Diamonds | 300,000 coins
+LE | Jevon Kearse | 92 | PHI | Blitz | 184,500 coins
+LE | Malcolm Koonce | 91 | LV | Team of the Week | 90,100 coins
+RE | J.J. Watt | 96 | SEA | Team Diamonds | 3,688,500 coins
+RE | Howie Long | 92 | LV | Legends | 127,500 coins
+DT | Jalen Carter | 93 | PHI | Ghost Of MUT | 348,250 coins
+DT | William Perry | 91 | PHI | All Madden | 90,500 coins
+DT | John Randle | 90 | SEA | Legends | 69,850 coins
+DT | Poona Ford | 89 | SEA | Team Builders | 65,150 coins
+LOLB | Harold Carmichael | 93 | PHI | Ghost Of MUT | 358,250 coins
+LOLB | Nolan Smith Jr | 93 | PHI | Blitz | 861,000 coins
+MLB | Jordyn Brooks | 91 | SEA | Stocking Stuffers | 11,450 coins
+MLB | Kenneth Murray Jr | 91 | LV | Division Dynasty | 85,100 coins
+MLB | Nakobe Dean | 91 | PHI | Campus Heroes II | 89,000 coins
+MLB | Robert Spillane | 91 | LV | Redux | 90,050 coins
+ROLB | Haason Reddick | 94 | PHI | Team of the Week | 942,500 coins
+ROLB | Khalil Mack | 89 | LV | Team of the Week | 29,150 coins
+CB | Marcus Peters | 94 | LV | Campus Heroes II | 410,000 coins
+CB | Randy Moss | 94 | LV | Ghost Of MUT | 1,883,500 coins
+CB | Rasul Douglas | 93 | PHI | Zero Chill | 303,000 coins
+CB | Tariq Woolen | 93 | SEA | Zero Chill | 350,000 coins
+CB | Devin Hester | 93 | SEA | Ghost Of MUT | 374,250 coins
+FS | Jack Tatum | 93 | LV | Legends | 387,250 coins
+FS | Merton Hanks | 92 | SEA | Team Diamonds | 300,500 coins
+SS | Bo Jackson | 94 | LV | Zero Chill | 718,500 coins
+SS | C.Gardner-Johnson Ceedy Duce | 91 | PHI | AKA | 86,600 coins
+K | Gary Anderson | 94 | PHI | Legends | 561,000 coins
+P | Michael Dickson | 89 | SEA | Team Builders | 61,650 coins
+
+Chem | Number
+--- | ---
+PHI | 21
+LV | 17
+SEA | 14
